@@ -6,30 +6,29 @@
   <title>Niah × South Summit Madrid 2026 — Partnership Proposal</title>
   <style>
     :root {
-      --ivory: #F7F1E8;
-      --espresso: #241C17;
-      --terracotta: #B86A4B;
-      --olive: #8A846F;
-      --oat: #E7D8C7;
-      --gold: #D7A85E;
+      --bg-primary: #1C1816;
+      --bg-secondary: #332D29;
+      --text-primary: #F2EBE1;
+      --text-muted: #8C7B6C;
+      --terracotta: #A65746;
     }
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
       font-family: 'Georgia', serif;
-      background: var(--oat);
-      color: var(--espresso);
+      background: var(--bg-secondary);
+      color: var(--text-primary);
     }
     .page {
       max-width: 800px;
       margin: 40px auto;
-      background: var(--ivory);
-      box-shadow: 0 4px 40px rgba(36,28,23,0.15);
+      background: var(--bg-primary);
+      box-shadow: 0 4px 40px rgba(0,0,0,0.4);
     }
 
     /* ─── COVER PAGE ─── */
     .cover {
-      background: var(--espresso);
-      color: var(--ivory);
+      background: var(--bg-primary);
+      color: var(--text-primary);
       padding: 80px 60px;
       text-align: center;
       min-height: 100vh;
@@ -55,19 +54,19 @@
       font-size: 3rem;
       font-weight: 400;
       letter-spacing: -0.02em;
-      color: var(--ivory);
+      color: var(--text-primary);
       margin-bottom: 8px;
     }
     .cover h1 span { color: var(--terracotta); }
     .cover-subtitle {
       font-size: 1.2rem;
-      color: var(--olive);
+      color: var(--text-muted);
       margin-bottom: 48px;
       font-style: italic;
     }
     .cover-event {
       background: var(--terracotta);
-      color: #fff;
+      color: var(--text-primary);
       font-size: 0.75rem;
       font-weight: 600;
       letter-spacing: 0.1em;
@@ -78,11 +77,11 @@
     }
     .cover-meta {
       font-size: 0.8rem;
-      color: var(--olive);
+      color: var(--text-muted);
       line-height: 2;
     }
     .cover-meta strong {
-      color: var(--oat);
+      color: var(--bg-secondary);
       font-weight: 400;
     }
     .cover-divider {
@@ -94,8 +93,8 @@
 
     /* ─── PAGE COMMON ─── */
     .page-header {
-      background: var(--espresso);
-      color: var(--ivory);
+      background: var(--bg-secondary);
+      color: var(--text-primary);
       padding: 40px 60px;
     }
     .page-header .section-label {
@@ -109,12 +108,12 @@
     .page-header h2 {
       font-size: 1.8rem;
       font-weight: 400;
-      color: var(--ivory);
+      color: var(--text-primary);
       margin-bottom: 8px;
     }
     .page-header .page-subtitle {
       font-size: 0.85rem;
-      color: var(--olive);
+      color: var(--text-muted);
     }
     .page-content {
       padding: 48px 60px;
@@ -122,7 +121,7 @@
 
     /* ─── LETTERHEAD ─── */
     .letterhead {
-      background: var(--oat);
+      background: var(--bg-secondary);
       padding: 32px 60px;
       border-bottom: 3px solid var(--terracotta);
     }
@@ -145,7 +144,7 @@
     .letterhead-to p {
       font-size: 0.85rem;
       line-height: 1.8;
-      color: var(--espresso);
+      color: var(--text-primary);
     }
     .letterhead-from p strong,
     .letterhead-to p strong {
@@ -159,13 +158,13 @@
       gap: 12px;
       margin-bottom: 24px;
       padding-bottom: 12px;
-      border-bottom: 1px solid var(--oat);
+      border-bottom: 1px solid var(--bg-secondary);
     }
     .section-number {
       width: 32px;
       height: 32px;
       background: var(--terracotta);
-      color: #fff;
+      color: var(--bg-primary);
       border-radius: 50%;
       display: flex;
       align-items: center;
@@ -177,14 +176,14 @@
     .section-title h3 {
       font-size: 1.1rem;
       font-weight: 700;
-      color: var(--espresso);
+      color: var(--text-primary);
     }
 
     /* ─── INTRO ─── */
     .intro-text {
       font-size: 1rem;
       line-height: 1.9;
-      color: var(--espresso);
+      color: var(--text-muted);
       margin-bottom: 32px;
     }
     .intro-text strong { color: var(--terracotta); }
@@ -197,7 +196,7 @@
       margin-bottom: 32px;
     }
     .stat-card {
-      background: var(--oat);
+      background: var(--bg-secondary);
       border-radius: 12px;
       padding: 20px;
       text-align: center;
@@ -213,7 +212,7 @@
       font-size: 0.7rem;
       text-transform: uppercase;
       letter-spacing: 0.08em;
-      color: var(--olive);
+      color: var(--text-muted);
     }
 
     /* ─── PROBLEM/SOLUTION ─── */
@@ -224,12 +223,12 @@
       margin-bottom: 32px;
     }
     .ps-card {
-      background: var(--oat);
+      background: var(--bg-secondary);
       border-radius: 12px;
       padding: 24px;
       border-left: 4px solid var(--terracotta);
     }
-    .ps-card.solution { border-left-color: var(--olive); }
+    .ps-card.solution { border-left-color: var(--text-muted); }
     .ps-card h4 {
       font-size: 0.7rem;
       text-transform: uppercase;
@@ -237,11 +236,11 @@
       color: var(--terracotta);
       margin-bottom: 10px;
     }
-    .ps-card.solution h4 { color: var(--olive); }
+    .ps-card.solution h4 { color: var(--text-muted); }
     .ps-card p {
       font-size: 0.85rem;
       line-height: 1.7;
-      color: var(--espresso);
+      color: var(--text-primary);
     }
     .ps-card ul {
       list-style: none;
@@ -249,7 +248,7 @@
     }
     .ps-card ul li {
       font-size: 0.82rem;
-      color: var(--espresso);
+      color: var(--text-muted);
       padding: 4px 0;
       padding-left: 16px;
       position: relative;
@@ -268,8 +267,8 @@
       margin-bottom: 32px;
     }
     .scope-table th {
-      background: var(--espresso);
-      color: var(--ivory);
+      background: var(--bg-secondary);
+      color: var(--text-primary);
       padding: 12px 16px;
       font-size: 0.65rem;
       text-transform: uppercase;
@@ -279,12 +278,12 @@
     .scope-table td {
       padding: 14px 16px;
       font-size: 0.82rem;
-      color: var(--espresso);
-      border-bottom: 1px solid var(--oat);
+      color: var(--text-muted);
+      border-bottom: 1px solid var(--bg-secondary);
       vertical-align: top;
     }
-    .scope-table tr:nth-child(even) td { background: var(--oat); }
-    .scope-table td:first-child { font-weight: 700; }
+    .scope-table tr:nth-child(even) td { background: var(--bg-secondary); }
+    .scope-table td:first-child { font-weight: 700; color: var(--text-primary); }
     .scope-table .price {
       font-weight: 700;
       color: var(--terracotta);
@@ -292,12 +291,12 @@
     }
     .scope-table tfoot td {
       font-weight: 700;
-      background: var(--espresso);
-      color: var(--ivory);
+      background: var(--bg-secondary);
+      color: var(--terracotta);
       font-size: 0.85rem;
     }
     .scope-table tfoot td.price {
-      color: var(--gold);
+      color: var(--text-primary);
     }
 
     /* ─── TOOLS ─── */
@@ -307,7 +306,7 @@
       gap: 16px;
     }
     .tool-card {
-      background: var(--oat);
+      background: var(--bg-secondary);
       border-radius: 10px;
       padding: 20px;
     }
@@ -318,12 +317,12 @@
     .tool-card h5 {
       font-size: 0.85rem;
       font-weight: 700;
-      color: var(--espresso);
+      color: var(--text-primary);
       margin-bottom: 6px;
     }
     .tool-card p {
       font-size: 0.75rem;
-      color: var(--olive);
+      color: var(--text-muted);
       line-height: 1.6;
     }
     .tool-card .tool-cost {
@@ -335,8 +334,8 @@
 
     /* ─── CTA ─── */
     .cta-box {
-      background: var(--espresso);
-      color: var(--ivory);
+      background: var(--bg-secondary);
+      color: var(--text-primary);
       border-radius: 12px;
       padding: 32px 40px;
       display: flex;
@@ -347,17 +346,17 @@
     }
     .cta-text h4 {
       font-size: 1rem;
-      color: var(--oat);
+      color: var(--text-muted);
       margin-bottom: 6px;
     }
     .cta-text p {
       font-size: 0.8rem;
-      color: var(--olive);
+      color: var(--text-muted);
       line-height: 1.6;
     }
     .cta-btn {
       background: var(--terracotta);
-      color: #fff;
+      color: var(--text-primary);
       padding: 14px 28px;
       border-radius: 8px;
       text-decoration: none;
@@ -366,14 +365,14 @@
       white-space: nowrap;
       flex-shrink: 0;
     }
-    .cta-btn:hover { background: #a05a3a; }
+    .cta-btn:hover { filter: brightness(1.15); }
 
     /* ─── FOOTER ─── */
     .footer-note {
-      background: var(--oat);
+      background: var(--bg-secondary);
       padding: 20px 60px;
       font-size: 0.7rem;
-      color: var(--olive);
+      color: var(--text-muted);
       text-align: center;
       line-height: 1.7;
     }
@@ -400,15 +399,15 @@
 <!-- ═══════════════════════════════════════ PAGE 1: COVER ═══════════════════════════════════════ -->
 <div class="cover">
   <svg class="cover-logo" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <circle cx="36" cy="12" r="6" fill="#B86A4B"/>
-    <line x1="36" y1="18" x2="36" y2="60" stroke="#F7F1E8" stroke-width="3" stroke-linecap="round"/>
-    <ellipse cx="36" cy="60" rx="9" ry="4.5" stroke="#F7F1E8" stroke-width="2" fill="none"/>
-    <path d="M24 30 Q36 42 48 30" stroke="#B86A4B" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-    <path d="M24 42 Q36 30 48 42" stroke="#B86A4B" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-    <circle cx="24" cy="30" r="3" fill="#B86A4B"/>
-    <circle cx="48" cy="30" r="3" fill="#B86A4B"/>
-    <circle cx="24" cy="42" r="3" fill="#B86A4B"/>
-    <circle cx="48" cy="42" r="3" fill="#B86A4B"/>
+    <circle cx="36" cy="12" r="6" fill="#A65746"/>
+    <line x1="36" y1="18" x2="36" y2="60" stroke="#F2EBE1" stroke-width="3" stroke-linecap="round"/>
+    <ellipse cx="36" cy="60" rx="9" ry="4.5" stroke="#F2EBE1" stroke-width="2" fill="none"/>
+    <path d="M24 30 Q36 42 48 30" stroke="#A65746" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    <path d="M24 42 Q36 30 48 42" stroke="#A65746" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    <circle cx="24" cy="30" r="3" fill="#A65746"/>
+    <circle cx="48" cy="30" r="3" fill="#A65746"/>
+    <circle cx="24" cy="42" r="3" fill="#A65746"/>
+    <circle cx="48" cy="42" r="3" fill="#A65746"/>
   </svg>
 
   <div class="cover-overline">Partnership Proposal</div>
