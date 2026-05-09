@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Niah × South Summit Madrid 2026 — Partnership Proposal</title>
+  <style>
+    :root {
+      --ivory: #F7F1E8;
+      --espresso: #241C17;
+      --terracotta: #B86A4B;
+      --olive: #8A846F;
+      --oat: #E7D8C7;
+      --gold: #D7A85E;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Georgia', serif;
+      background: var(--oat);
+      color: var(--espresso);
+    }
+    .page {
+      max-width: 800px;
+      margin: 40px auto;
+      background: var(--ivory);
+      box-shadow: 0 4px 40px rgba(36,28,23,0.15);
+    }
+
+    /* ─── COVER PAGE ─── */
+    .cover {
+      background: var(--espresso);
+      color: var(--ivory);
+      padding: 80px 60px;
+      text-align: center;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .cover-logo {
+      width: 72px;
+      height: 72px;
+      margin-bottom: 32px;
+    }
+    .cover-overline {
+      font-family: 'Helvetica Neue', sans-serif;
+      font-size: 0.7rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--terracotta);
+      margin-bottom: 24px;
+    }
+    .cover h1 {
+      font-size: 3rem;
+      font-weight: 400;
+      letter-spacing: -0.02em;
+      color: var(--ivory);
+      margin-bottom: 8px;
+    }
+    .cover h1 span { color: var(--terracotta); }
+    .cover-subtitle {
+      font-size: 1.2rem;
+      color: var(--olive);
+      margin-bottom: 48px;
+      font-style: italic;
+    }
+    .cover-event {
+      background: var(--terracotta);
+      color: #fff;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 8px 20px;
+      border-radius: 30px;
+      margin-bottom: 48px;
+    }
+    .cover-meta {
+      font-size: 0.8rem;
+      color: var(--olive);
+      line-height: 2;
+    }
+    .cover-meta strong {
+      color: var(--oat);
+      font-weight: 400;
+    }
+    .cover-divider {
+      width: 60px;
+      height: 2px;
+      background: var(--terracotta);
+      margin: 32px auto;
+    }
+
+    /* ─── PAGE COMMON ─── */
+    .page-header {
+      background: var(--espresso);
+      color: var(--ivory);
+      padding: 40px 60px;
+    }
+    .page-header .section-label {
+      font-family: 'Helvetica Neue', sans-serif;
+      font-size: 0.65rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--terracotta);
+      margin-bottom: 8px;
+    }
+    .page-header h2 {
+      font-size: 1.8rem;
+      font-weight: 400;
+      color: var(--ivory);
+      margin-bottom: 8px;
+    }
+    .page-header .page-subtitle {
+      font-size: 0.85rem;
+      color: var(--olive);
+    }
+    .page-content {
+      padding: 48px 60px;
+    }
+
+    /* ─── LETTERHEAD ─── */
+    .letterhead {
+      background: var(--oat);
+      padding: 32px 60px;
+      border-bottom: 3px solid var(--terracotta);
+    }
+    .letterhead-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+    }
+    .letterhead-from label,
+    .letterhead-to label {
+      font-family: 'Helvetica Neue', sans-serif;
+      font-size: 0.6rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--terracotta);
+      margin-bottom: 6px;
+      display: block;
+    }
+    .letterhead-from p,
+    .letterhead-to p {
+      font-size: 0.85rem;
+      line-height: 1.8;
+      color: var(--espresso);
+    }
+    .letterhead-from p strong,
+    .letterhead-to p strong {
+      font-weight: 700;
+    }
+
+    /* ─── SECTION TITLE ─── */
+    .section-title {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 24px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--oat);
+    }
+    .section-number {
+      width: 32px;
+      height: 32px;
+      background: var(--terracotta);
+      color: #fff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.8rem;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+    .section-title h3 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--espresso);
+    }
+
+    /* ─── INTRO ─── */
+    .intro-text {
+      font-size: 1rem;
+      line-height: 1.9;
+      color: var(--espresso);
+      margin-bottom: 32px;
+    }
+    .intro-text strong { color: var(--terracotta); }
+
+    /* ─── STAT BLOCKS ─── */
+    .stat-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-bottom: 32px;
+    }
+    .stat-card {
+      background: var(--oat);
+      border-radius: 12px;
+      padding: 20px;
+      text-align: center;
+    }
+    .stat-number {
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: var(--terracotta);
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+    .stat-label {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--olive);
+    }
+
+    /* ─── PROBLEM/SOLUTION ─── */
+    .ps-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      margin-bottom: 32px;
+    }
+    .ps-card {
+      background: var(--oat);
+      border-radius: 12px;
+      padding: 24px;
+      border-left: 4px solid var(--terracotta);
+    }
+    .ps-card.solution { border-left-color: var(--olive); }
+    .ps-card h4 {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--terracotta);
+      margin-bottom: 10px;
+    }
+    .ps-card.solution h4 { color: var(--olive); }
+    .ps-card p {
+      font-size: 0.85rem;
+      line-height: 1.7;
+      color: var(--espresso);
+    }
+    .ps-card ul {
+      list-style: none;
+      margin-top: 10px;
+    }
+    .ps-card ul li {
+      font-size: 0.82rem;
+      color: var(--espresso);
+      padding: 4px 0;
+      padding-left: 16px;
+      position: relative;
+    }
+    .ps-card ul li::before {
+      content: '→';
+      position: absolute;
+      left: 0;
+      color: var(--terracotta);
+    }
+
+    /* ─── SCOPE TABLE ─── */
+    .scope-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 32px;
+    }
+    .scope-table th {
+      background: var(--espresso);
+      color: var(--ivory);
+      padding: 12px 16px;
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      text-align: left;
+    }
+    .scope-table td {
+      padding: 14px 16px;
+      font-size: 0.82rem;
+      color: var(--espresso);
+      border-bottom: 1px solid var(--oat);
+      vertical-align: top;
+    }
+    .scope-table tr:nth-child(even) td { background: var(--oat); }
+    .scope-table td:first-child { font-weight: 700; }
+    .scope-table .price {
+      font-weight: 700;
+      color: var(--terracotta);
+      text-align: right;
+    }
+    .scope-table tfoot td {
+      font-weight: 700;
+      background: var(--espresso);
+      color: var(--ivory);
+      font-size: 0.85rem;
+    }
+    .scope-table tfoot td.price {
+      color: var(--gold);
+    }
+
+    /* ─── TOOLS ─── */
+    .tool-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    .tool-card {
+      background: var(--oat);
+      border-radius: 10px;
+      padding: 20px;
+    }
+    .tool-icon {
+      font-size: 1.5rem;
+      margin-bottom: 8px;
+    }
+    .tool-card h5 {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--espresso);
+      margin-bottom: 6px;
+    }
+    .tool-card p {
+      font-size: 0.75rem;
+      color: var(--olive);
+      line-height: 1.6;
+    }
+    .tool-card .tool-cost {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--terracotta);
+      margin-top: 8px;
+    }
+
+    /* ─── CTA ─── */
+    .cta-box {
+      background: var(--espresso);
+      color: var(--ivory);
+      border-radius: 12px;
+      padding: 32px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      margin-top: 32px;
+    }
+    .cta-text h4 {
+      font-size: 1rem;
+      color: var(--oat);
+      margin-bottom: 6px;
+    }
+    .cta-text p {
+      font-size: 0.8rem;
+      color: var(--olive);
+      line-height: 1.6;
+    }
+    .cta-btn {
+      background: var(--terracotta);
+      color: #fff;
+      padding: 14px 28px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 0.8rem;
+      font-weight: 600;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    .cta-btn:hover { background: #a05a3a; }
+
+    /* ─── FOOTER ─── */
+    .footer-note {
+      background: var(--oat);
+      padding: 20px 60px;
+      font-size: 0.7rem;
+      color: var(--olive);
+      text-align: center;
+      line-height: 1.7;
+    }
+
+    /* ─── PAGE BREAK ─── */
+    .page-break { page-break-after: always; }
+
+    @media print {
+      body { background: white; }
+      .page { box-shadow: none; margin: 0; }
+      .page-break { page-break-after: always; }
+    }
+    @media (max-width: 768px) {
+      .page { margin: 0; }
+      .cover { padding: 60px 32px; }
+      .page-header, .page-content, .letterhead { padding: 32px; }
+      .letterhead-grid, .ps-grid, .stat-grid, .tool-grid { grid-template-columns: 1fr; }
+      .cta-box { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════ PAGE 1: COVER ═══════════════════════════════════════ -->
+<div class="cover">
+  <svg class="cover-logo" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="36" cy="12" r="6" fill="#B86A4B"/>
+    <line x1="36" y1="18" x2="36" y2="60" stroke="#F7F1E8" stroke-width="3" stroke-linecap="round"/>
+    <ellipse cx="36" cy="60" rx="9" ry="4.5" stroke="#F7F1E8" stroke-width="2" fill="none"/>
+    <path d="M24 30 Q36 42 48 30" stroke="#B86A4B" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    <path d="M24 42 Q36 30 48 42" stroke="#B86A4B" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    <circle cx="24" cy="30" r="3" fill="#B86A4B"/>
+    <circle cx="48" cy="30" r="3" fill="#B86A4B"/>
+    <circle cx="24" cy="42" r="3" fill="#B86A4B"/>
+    <circle cx="48" cy="42" r="3" fill="#B86A4B"/>
+  </svg>
+
+  <div class="cover-overline">Partnership Proposal</div>
+  <h1>Niah<span>.</span></h1>
+  <p class="cover-subtitle">AI Matchmaking for South Summit Madrid</p>
+  <div class="cover-event">June 3–5, 2026 · La Nave, Madrid</div>
+  <div class="cover-divider"></div>
+  <div class="cover-meta">
+    <strong>Prepared for:</strong> Giorgio Rodriguezano, South Summit<br>
+    <strong>Prepared by:</strong> Jordan Hays, Founder — Niah<br>
+    <strong>Date:</strong> May 9, 2026
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════ PAGE 2: LETTERHEAD ═══════════════════════════════════════ -->
+<div class="page">
+  <div class="letterhead">
+    <div class="letterhead-grid">
+      <div class="letterhead-from">
+        <label>From</label>
+        <p>
+          <strong>Jordan Hays</strong><br>
+          Founder, Niah<br>
+          jordan@jordanjayhays.com<br>
+          +34 6XX XXX XXX<br>
+          <a href="https://jordanjayhays-cpu.github.io/niah-dashboard/" style="color:#B86A4B;">niah-dashboard</a>
+        </p>
+      </div>
+      <div class="letterhead-to">
+        <label>To</label>
+        <p>
+          <strong>Giorgio Rodriguezano</strong><br>
+          Partnerships, South Summit Madrid<br>
+          <a href="mailto:partners@southsummit.io" style="color:#B86A4B;">partners@southsummit.io</a><br>
+          South Summit — Spain Startup S.L.<br>
+          La Nave, Madrid
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-content">
+    <p class="intro-text">
+      Dear Giorgio,
+    </p>
+    <p class="intro-text">
+      <strong>South Summit Madrid (June 3–5, 2026)</strong> brings together 20,000 attendees, 2,100 investors, and 134 countries around a shared mission: connecting entrepreneurs with capital, corporates, and each other. That mission depends entirely on one thing — <strong>quality networking</strong>.
+    </p>
+    <p class="intro-text">
+      Yet at this scale, meaningful connection is nearly impossible. Attendees rely on random encounters, badge scanning, and LinkedIn scraping — producing volume, not quality. <strong>Niah</strong> solves this: an AI matchmaking tool that learns attendee profiles and delivers 3–5 curated introductions per day, with meeting rationale and conversation openers.
+    </p>
+    <p class="intro-text">
+      This proposal outlines a <strong>zero-cost pilot partnership</strong> in exchange for branding placement and a post-event case study. It also details the <strong>tool infrastructure costs</strong> we are asking South Summit to sponsor, which directly enable Niah to operate at South Summit scale.
+    </p>
+  </div>
+
+  <!-- Stats -->
+  <div class="page-content" style="padding-top:0;">
+    <div class="stat-grid">
+      <div class="stat-card">
+        <div class="stat-number">20K+</div>
+        <div class="stat-label">Attendees</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">2,100</div>
+        <div class="stat-label">Investors</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">134</div>
+        <div class="stat-label">Countries</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-note">
+    Confidential — Niah Partnership Proposal · South Summit Madrid 2026
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════ PAGE 3: PROBLEM + SOLUTION ═══════════════════════════════════════ -->
+<div class="page page-break">
+  <div class="page-header">
+    <div class="section-label">Section 01</div>
+    <h2>The Problem & The Solution</h2>
+    <div class="page-subtitle">Why networking fails at South Summit scale — and how Niah fixes it</div>
+  </div>
+
+  <div class="page-content">
+    <div class="ps-grid">
+      <div class="ps-card">
+        <h4>The Problem</h4>
+        <p>At 20,000 people, the odds of a valuable, serendipitous meeting are near zero. Networking becomes noise.</p>
+        <ul>
+          <li>No intelligent matching — just proximity and chance</li>
+          <li>Investor time is expensive — bad meetings waste it</li>
+          <li>Startups can't find the right investors fast enough</li>
+          <li>Corporates struggle to identify relevant innovators</li>
+          <li>Post-event follow-up is manual and inconsistent</li>
+        </ul>
+      </div>
+      <div class="ps-card solution">
+        <h4>Our Solution</h4>
+        <p>Niah learns each attendee's profile and delivers daily curated match recommendations.</p>
+        <ul>
+          <li>AI matching: investor thesis ↔ startup stage/market</li>
+          <li>Corporate needs ↔ solution providers on the floor</li>
+          <li>Conversation openers included — not just names</li>
+          <li>Meeting requests with rationales sent directly</li>
+          <li>30-day follow-up reminders post-event</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="section-title">
+      <div class="section-number">1</div>
+      <h3>Why This Works for South Summit</h3>
+    </div>
+    <p class="intro-text">
+      South Summit's three-way ecosystem — <strong>investors × startups × corporations</strong> — is the ideal matchmaking geometry. The matching logic is already embedded in attendee registration categories. Niah doesn't need to guess; it works with the data South Summit already collects.
+    </p>
+    <p class="intro-text">
+      Pilot <strong>risk to South Summit is zero</strong>: Niah operates at no cost in exchange for branding placement and post-event feedback. We fund our own tools and infrastructure. If results don't meet expectations, there is no obligation to continue.
+    </p>
+  </div>
+
+  <div class="footer-note">
+    Confidential — Niah Partnership Proposal · South Summit Madrid 2026
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════ PAGE 4: SCOPE + TOOLS ═══════════════════════════════════════ -->
+<div class="page page-break">
+  <div class="page-header">
+    <div class="section-label">Section 02</div>
+    <h2>Scope of Partnership</h2>
+    <div class="page-subtitle">What we provide, and what we ask South Summit to sponsor</div>
+  </div>
+
+  <div class="page-content">
+    <div class="section-title">
+      <div class="section-number">2</div>
+      <h3>What Niah Provides — Free of Charge</h3>
+    </div>
+    <table class="scope-table">
+      <thead>
+        <tr>
+          <th>Deliverable</th>
+          <th>Description</th>
+          <th>Value</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>AI Matchmaking Engine</td>
+          <td>Profile matching algorithm for 20,000 attendees, 3 curated introductions per person per day</td>
+          <td class="price">€4,500</td>
+        </tr>
+        <tr>
+          <td>Dashboard & Reporting</td>
+          <td>Real-time match analytics, meeting acceptance rates, post-event connection quality metrics</td>
+          <td class="price">€1,200</td>
+        </tr>
+        <tr>
+          <td>Match Notifications</td>
+          <td>Email + SMS delivery of daily match recommendations to all attendees</td>
+          <td class="price">€800</td>
+        </tr>
+        <tr>
+          <td>Post-Event Analysis</td>
+          <td>30-day follow-up report with anonymized data for South Summit case study</td>
+          <td class="price">€600</td>
+        </tr>
+        <tr>
+          <td>Branded Integration</td>
+          <td>Co-branded matching interface, event app placement, pre-event email feature</td>
+          <td class="price">€1,000</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="2">Total Niah Contribution</td>
+          <td class="price">€8,100</td>
+        </tr>
+      </tfoot>
+    </table>
+
+    <div class="section-title">
+      <div class="section-number">3</div>
+      <h3>Tool Infrastructure — Sponsored by South Summit</h3>
+    </div>
+    <p class="intro-text" style="margin-bottom:20px;">
+      To operate at South Summit scale (20,000 recipients, 3 days, international audience), Niah requires the following tool infrastructure. We ask South Summit to sponsor these costs as part of the partnership agreement.
+    </p>
+
+    <div class="tool-grid">
+      <div class="tool-card">
+        <div class="tool-icon">📧</div>
+        <h5>Email Automation Platform</h5>
+        <p>Brevo (formerly Sendinblue) — 20,000 daily match notifications over 3 days. Includes email templates, deliverability optimization, and GDPR consent management.</p>
+        <div class="tool-cost">€ 890 / month × 2 = €1,780</div>
+      </div>
+      <div class="tool-card">
+        <div class="tool-icon">💬</div>
+        <h5>SMS Notifications</h5>
+        <p>Twilio — international SMS delivery for attendees without reliable email. Critical for 134-country audience reach.</p>
+        <div class="tool-cost">€ 420 / month × 2 = €840</div>
+      </div>
+      <div class="tool-card">
+        <div class="tool-icon">🔗</div>
+        <h5>Registration API Integration</h5>
+        <p>Secure attendee data pipeline from South Summit registration system to Niah matching engine. Requires inwink/integration support.</p>
+        <div class="tool-cost">€ 650 (one-time setup)</div>
+      </div>
+      <div class="tool-card">
+        <div class="tool-icon">📊</div>
+        <h5>Analytics & BI Dashboard</h5>
+        <p>Metabase or equivalent — real-time event dashboard showing match rates, acceptance rates, attendee satisfaction. Shared with South Summit post-event.</p>
+        <div class="tool-cost">€ 320 (month 1) + €180 = €500</div>
+      </div>
+      <div class="tool-card">
+        <div class="tool-icon">🛡️</div>
+        <h5>GDPR / Legal Compliance</h5>
+        <p>Cookie consent management, data processing agreements, attendee data deletion workflows. Required for EU event operations.</p>
+        <div class="tool-cost">€ 430 (fixed)</div>
+      </div>
+      <div class="tool-card">
+        <div class="tool-icon">🌐</div>
+        <h5>CDN & Hosting</h5>
+        <p>Vercel or Cloudflare — static asset delivery, API edge functions, DDoS protection for match notification service during peak hours.</p>
+        <div class="tool-cost">€ 280 (month 1) + €180 = €460</div>
+      </div>
+    </div>
+
+    <table class="scope-table" style="margin-top:24px;">
+      <tfoot>
+        <tr>
+          <td colspan="2">Total Tool Infrastructure (Sponsored by South Summit)</td>
+          <td class="price">€ 4,660</td>
+        </tr>
+      </tfoot>
+    </table>
+  </div>
+
+  <div class="footer-note">
+    All prices in EUR. Niah retains branding rights to anonymized case study data. South Summit receives full analytics dashboard post-event.
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════ PAGE 5: CTA ═══════════════════════════════════════ -->
+<div class="page page-break">
+  <div class="page-header">
+    <div class="section-label">Section 03</div>
+    <h2>Partnership Terms & Next Steps</h2>
+    <div class="page-subtitle">Simple structure — no money changes hands from Niah to South Summit</div>
+  </div>
+
+  <div class="page-content">
+    <div class="section-title">
+      <div class="section-number">4</div>
+      <h3>Partnership Structure</h3>
+    </div>
+    <table class="scope-table">
+      <thead>
+        <tr>
+          <th>Party</th>
+          <th>Commits</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Niah</strong></td>
+          <td>Free AI matchmaking engine + notifications + reporting + post-event case study. Value: €8,100</td>
+        </tr>
+        <tr>
+          <td><strong>South Summit</strong></td>
+          <td>Sponsor tool infrastructure costs (€4,660) + branded placement in event app/emails + permission to include South Summit in case study</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="section-title">
+      <div class="section-number">5</div>
+      <h3>Metrics We Will Track</h3>
+    </div>
+    <div class="tool-grid" style="margin-bottom:32px;">
+      <div class="tool-card">
+        <div class="tool-icon">🎯</div>
+        <h5>Match Rate</h5>
+        <p>Number of curated matches generated per attendee, per day</p>
+      </div>
+      <div class="tool-card">
+        <div class="tool-icon">✅</div>
+        <h5>Acceptance Rate</h5>
+        <p>Percentage of meeting requests accepted by invitees</p>
+      </div>
+      <div class="tool-card">
+        <div class="tool-icon">🤝</div>
+        <h5>Connection Quality</h5>
+        <p>30-day follow-up survey: did attendees meet? Was it valuable?</p>
+      </div>
+      <div class="tool-card">
+        <div class="tool-icon">⭐</div>
+        <h5>Satisfaction Score</h5>
+        <p>Post-event attendee rating of networking experience vs. previous year</p>
+      </div>
+    </div>
+
+    <div class="cta-box">
+      <div class="cta-text">
+        <h4>Let's make South Summit 2026 the best-connected event in the world.</h4>
+        <p>Zero cost to South Summit beyond tool sponsorship.<br>Full case study + analytics dashboard returned post-event.</p>
+      </div>
+      <a class="cta-btn" href="mailto:partners@southsummit.io?subject=Niah%20×%20South%20Summit%202026%20—%20Partnership%20Proposal&body=Hi%20Giorgio%2C%0A%0APlease%20find%20attached%20our%20partnership%20proposal%20for%20the%20South%20Summit%20Madrid%20AI%20Matchmaking%20Pilot.%0A%0ALooking%20forward%20to%20connecting.%0A%0ABest%2C%0AJordan%20Hays%0ANiah">Send Proposal Email →</a>
+    </div>
+  </div>
+
+  <div class="footer-note">
+    Jordan Hays · Niah · jordan@jordanjayhays.com · +34 6XX XXX XXX<br>
+    Confidential — Niah Partnership Proposal · South Summit Madrid 2026
+  </div>
+</div>
+
+</body>
+</html>
