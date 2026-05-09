@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Niah — Madrid B2B Events</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #0d0d0d; color: #e8e0d5; min-height: 100vh; }
+    .container { max-width: 1100px; margin: 0 auto; padding: 40px 24px; }
+    header { text-align: center; margin-bottom: 48px; }
+    h1 { font-size: 2.5rem; font-weight: 700; letter-spacing: -0.03em; color: #e8e0d5; }
+    h1 span { color: #e05d2a; }
+    .tagline { color: #888; font-size: 1rem; margin-top: 8px; }
+    .divider { width: 60px; height: 2px; background: #e05d2a; margin: 20px auto; }
+    .mission { background: #1a1a1a; border: 1px solid #2a2a2a; border-radius: 12px; padding: 24px; margin-bottom: 40px; }
+    .mission h2 { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; color: #e05d2a; margin-bottom: 8px; }
+    .mission p { font-size: 1.1rem; line-height: 1.6; color: #ccc; }
+    .section-header { display: flex; align-items: center; gap: 12px; margin-bottom: 20px; }
+    .section-header h2 { font-size: 1.3rem; font-weight: 600; }
+    .badge { background: #e05d2a; color: #fff; font-size: 0.7rem; font-weight: 600; padding: 2px 8px; border-radius: 20px; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 16px; margin-bottom: 48px; }
+    .card { background: #1a1a1a; border: 1px solid #2a2a2a; border-radius: 12px; padding: 20px; }
+    .card-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 12px; }
+    .card-org { font-size: 1rem; font-weight: 700; color: #e8e0d5; }
+    .card-contact { font-size: 0.8rem; color: #e05d2a; font-weight: 600; }
+    .card-name { font-size: 0.85rem; color: #aaa; margin-bottom: 8px; }
+    .card-link { font-size: 0.8rem; color: #666; word-break: break-all; }
+    .card-link a { color: #888; text-decoration: none; }
+    .card-link a:hover { color: #e05d2a; }
+    .card-tag { display: inline-block; font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.08em; padding: 3px 8px; border-radius: 4px; font-weight: 600; }
+    .tag-venue { background: #2a2a1a; color: #c9a227; }
+    .tag-organizer { background: #1a2a2a; color: #27a8a8; }
+    .tag-conference { background: #2a1a2a; color: #a827a8; }
+    .comp-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; margin-bottom: 48px; }
+    .comp-card { background: #1a1a1a; border: 1px solid #2a2a2a; border-radius: 12px; padding: 20px; }
+    .comp-name { font-size: 1.1rem; font-weight: 700; margin-bottom: 12px; }
+    .comp-name span { font-size: 0.7rem; font-weight: 400; color: #666; margin-left: 8px; }
+    .pros-cons { margin-top: 12px; }
+    .label { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; font-weight: 600; margin-bottom: 4px; }
+    .pro { color: #4ade80; }
+    .con { color: #f87171; }
+    .weak { color: #fbbf24; }
+    .bullet { font-size: 0.85rem; color: #999; margin-bottom: 4px; padding-left: 12px; position: relative; }
+    .bullet::before { content: '–'; position: absolute; left: 0; color: #555; }
+    .research-card { background: #1a1a1a; border: 1px solid #2a2a2a; border-radius: 12px; padding: 20px 24px; margin-bottom: 48px; }
+    .research-row { display: flex; align-items: center; gap: 12px; padding: 8px 0; border-bottom: 1px solid #222; }
+    .research-row:last-child { border-bottom: none; }
+    .status-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+    .done { background: #4ade80; }
+    .in-progress { background: #e05d2a; animation: pulse 1.5s infinite; }
+    .todo { background: #555; }
+    @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
+    .research-task { font-size: 0.9rem; color: #bbb; flex: 1; }
+    .research-agent { font-size: 0.75rem; color: #666; }
+    .outreach-placeholder { background: #1a1a1a; border: 1px solid #2a2a2a; border-radius: 12px; padding: 32px; text-align: center; color: #555; font-size: 0.9rem; }
+    footer { text-align: center; color: #444; font-size: 0.75rem; padding-top: 32px; border-top: 1px solid #1a1a1a; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <svg class="logo-mark" style="width:48px;height:48px;margin:0 auto 16px;display:block" viewBox="0 0 48 48" fill="none">
+        <circle cx="24" cy="8" r="4" fill="#e05d2a"/>
+        <line x1="24" y1="12" x2="24" y2="40" stroke="#e8e0d5" stroke-width="2" stroke-linecap="round"/>
+        <ellipse cx="24" cy="40" rx="6" ry="3" stroke="#e8e0d5" stroke-width="1.5" fill="none"/>
+        <path d="M16 20 Q24 28 32 20" stroke="#e05d2a" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+        <path d="M16 28 Q24 20 32 28" stroke="#e05d2a" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+        <circle cx="16" cy="20" r="2" fill="#e05d2a"/>
+        <circle cx="32" cy="20" r="2" fill="#e05d2a"/>
+        <circle cx="16" cy="28" r="2" fill="#e05d2a"/>
+        <circle cx="32" cy="28" r="2" fill="#e05d2a"/>
+      </svg>
+      <h1>Niah<span style="color:#e05d2a">.</span></h1>
+      <p class="tagline">B2B Event Networking — Madrid Market</p>
+      <div class="divider"></div>
+    </header>
+    <div class="mission">
+      <h2>Mission</h2>
+      <p>AI matchmaking + micro-experiences for B2B conference attendees in Madrid. First target: Q3-Q4 2026 IFEMA events. Pilot with 1-2 organizers, prove ROI, expand to pharma/tech/finance associations.</p>
+    </div>
+
+    <div class="section-header">
+      <h2>👥 Lead Targets</h2>
+      <span class="badge">5 contacts</span>
+    </div>
+    <div class="grid">
+      <div class="card">
+        <div class="card-header"><span class="card-org">IFEMA</span><span class="card-tag tag-venue">Venue</span></div>
+        <p class="card-name">Esther Jiménez — Commercial Trade Show Manager</p>
+        <p class="card-link"><a href="https://linkedin.com/in/esther-jim%C3%A9nez-646486165" target="_blank">linkedin.com/in/esther-jiménez</a></p>
+        <p class="card-link">ifema.es/en/contact</p>
+      </div>
+      <div class="card">
+        <div class="card-header"><span class="card-org">CREA Group</span><span class="card-tag tag-organizer">Organizer</span></div>
+        <p class="card-name">Borja Llopart — Director (20+ years)</p>
+        <p class="card-link"><a href="https://linkedin.com/in/borja-llopart-0a04a236" target="_blank">linkedin.com/in/borja-llopart</a></p>
+        <p class="card-link">rrhh@creagroupevents.com</p>
+      </div>
+      <div class="card">
+        <div class="card-header"><span class="card-org">Meridional Events DMC</span><span class="card-tag tag-organizer">Organizer</span></div>
+        <p class="card-name">Contact via website</p>
+        <p class="card-link"><a href="https://www.meridionalevents.com/en/contact/" target="_blank">meridionalevents.com/en/contact</a></p>
+        <p class="card-link">Conferences · Product launches · Gala dinners</p>
+      </div>
+      <div class="card">
+        <div class="card-header"><span class="card-org">INFARMA Madrid 2027</span><span class="card-tag tag-conference">Conference</span></div>
+        <p class="card-name">March 16-18, 2027 @ IFEMA</p>
+        <p class="card-link">Pharmacy sector · 15,000+ attendees annually</p>
+        <p class="card-link">infarma.es</p>
+      </div>
+      <div class="card">
+        <div class="card-header"><span class="card-org">Tech Show Madrid 2026</span><span class="card-tag tag-conference">Conference</span></div>
+        <p class="card-name">TBD dates, Madrid</p>
+        <p class="card-link">Tech crowd = early adopters for AI matchmaking</p>
+        <p class="card-link">techshowmadrid.es</p>
+      </div>
+    </div>
+
+    <div class="section-header">
+      <h2>⚔️ Competitive Landscape</h2>
+      <span class="badge">Nanobot research</span>
+    </div>
+    <div class="comp-grid">
+      <div class="comp-card">
+        <div class="comp-name">Brella <span>brella.io</span></div>
+        <div class="pros-cons"><p class="label pro">Strengths</p>
+          <p class="bullet">Simplest UI for networking</p>
+          <p class="bullet">Customizable all-in-one event app</p>
+          <p class="bullet">Good matchmaking + sponsor ROI</p>
+        </div>
+        <div class="pros-cons"><p class="label con">Weaknesses</p>
+          <p class="bullet">Features feel limited at scale</p>
+          <p class="bullet">Cluttered during large events</p>
+          <p class="bullet">Opaque pricing — custom quote only</p>
+        </div>
+        <div class="pros-cons"><p class="label weak">Our Opening</p>
+          <p class="bullet">Smaller orgs can't budget Brella — pricing gap</p>
+        </div>
+      </div>
+      <div class="comp-card">
+        <div class="comp-name">Swapcard <span>swapcard.com</span></div>
+        <div class="pros-cons"><p class="label pro">Strengths</p>
+          <p class="bullet">Unlimited events on all plans</p>
+          <p class="bullet">Flexible sizing per event</p>
+          <p class="bullet">Includes streaming + community</p>
+        </div>
+        <div class="pros-cons"><p class="label con">Weaknesses</p>
+          <p class="bullet">Pricing hidden — requires demo call</p>
+          <p class="bullet">Complex onboarding</p>
+          <p class="bullet">Last-minute events hard to set up</p>
+        </div>
+        <div class="pros-cons"><p class="label weak">Our Opening</p>
+          <p class="bullet">If event is last-minute, they can't onboard in time</p>
+        </div>
+      </div>
+      <div class="comp-card">
+        <div class="comp-name">Grip <span>grip.events</span></div>
+        <div class="pros-cons"><p class="label pro">Strengths</p>
+          <p class="bullet">Easy integrations (Zoom, Teams, Vimeo)</p>
+          <p class="bullet">Good value for money</p>
+          <p class="bullet">Solid matchmaking engine</p>
+        </div>
+        <div class="pros-cons"><p class="label con">Weaknesses</p>
+          <p class="bullet">Challenging back-end for event managers</p>
+          <p class="bullet">Pricing not transparent</p>
+        </div>
+        <div class="pros-cons"><p class="label weak">Our Opening</p>
+          <p class="bullet">Event managers avoid it unless forced to use it</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-header">
+      <h2>🔬 Research Pipeline</h2>
+    </div>
+    <div class="research-card">
+      <div class="research-row"><div class="status-dot done"></div><span class="research-task">Lead list — 5 targets with contacts</span><span class="research-agent">Hermes 007</span></div>
+      <div class="research-row"><div class="status-dot done"></div><span class="research-task">Competitive landscape — Brella / Swapcard / Grip analysis</span><span class="research-agent">Nanobot 006</span></div>
+      <div class="research-row"><div class="status-dot in-progress"></div><span class="research-task">Founder identification — CREA, Meridional, Nightlife Madrid</span><span class="research-agent">Nanobot 006</span></div>
+      <div class="research-row"><div class="status-dot in-progress"></div><span class="research-task">Brella / Swapcard negative news — client losses, staff cuts</span><span class="research-agent">Nanobot 006</span></div>
+      <div class="research-row"><div class="status-dot todo"></div><span class="research-task">IFEMA Q3-Q4 2026 full event calendar</span><span class="research-agent">Hermes 007</span></div>
+      <div class="research-row"><div class="status-dot todo"></div><span class="research-task">Outreach scripts — IFEMA partnership + organizer pilot pitch</span><span class="research-agent">Hermes 007</span></div>
+    </div>
+
+    <div class="section-header">
+      <h2>📤 Outreach Scripts</h2>
+    </div>
+    <div class="outreach-placeholder">Coming soon — IFEMA partnership pitch + organizer pilot ask scripts</div>
+
+    <footer>Niah Dashboard · May 9, 2026 · Hermes (007) + Nanobot (006)</footer>
+  </div>
+</body>
+</html>
