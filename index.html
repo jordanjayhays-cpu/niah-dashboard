@@ -28,6 +28,17 @@
     .leads-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(360px, 1fr)); gap: 20px; margin-bottom: 48px; }
     @media (max-width: 768px) { .leads-grid { grid-template-columns: 1fr; } }
 
+    /* Agent Network */
+    .agent-section { background: #1a1a2e; border-radius: 16px; padding: 32px; margin-top: 48px; }
+    .agent-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; margin-bottom: 24px; }
+    .agent-card { background: #16213e; border-radius: 12px; padding: 20px; border: 1px solid #0f3460; }
+    .agent-name { font-size: 16px; font-weight: 600; color: #e94560; margin-bottom: 8px; }
+    .agent-status { background: #00ff88; color: #0a0a0a; font-size: 10px; padding: 2px 8px; border-radius: 10px; margin-left: 8px; }
+    .agent-info { font-size: 13px; color: #a0a0a0; margin-bottom: 6px; }
+    .agent-platform { font-size: 11px; color: #666; }
+    .agent-coord { font-size: 12px; color: #888; line-height: 1.6; }
+    .agent-coord strong { color: #e94560; }
+
     /* Org card */
     .org-card { background: #1a1a1a; border-radius: 12px; overflow: hidden; }
 
@@ -986,6 +997,29 @@
         <div class="outreach-name">Simon Blazeby <span class="level level-top">Top</span></div>
         <div class="outreach-title">Managing Director — Events & Marketing (Global), CloserStill Media</div>
         <div class="outreach-msg">"Simon, I saw your post about the Madrid Tech Show and your connection to events in Spain. Niah is an AI-powered matchmaking tool that can significantly improve networking at events like the Madrid Tech Show. I'd be interested in discussing how Niah can enhance attendee engagement and ROI at your events."</div>
+      </div>
+    </div>
+
+    <div class="agent-section">
+      <div class="section-header">
+        <h2>🤖 Agent Network</h2>
+        <span class="badge">Hermes + Nanobot 006</span>
+      </div>
+      <div class="agent-grid">
+        <div class="agent-card">
+          <div class="agent-name">Hermes (007) <span class="agent-status">Active</span></div>
+          <div class="agent-info">Strategy, GitHub ops, HTML dashboard, outreach drafting, research synthesis</div>
+          <div class="agent-platform">Server · OpenRouter · Gemini 2.5 Flash</div>
+        </div>
+        <div class="agent-card">
+          <div class="agent-name">Nanobot (006) <span class="agent-status">Active</span></div>
+          <div class="agent-info">Background research, contact discovery, event intel, competitive landscape</div>
+          <div class="agent-platform">Railway · GitHub · Telegram</div>
+        </div>
+      </div>
+      <div class="agent-coord">
+        <p><strong>Coordination:</strong> Hermes assigns tasks → 006 executes via Telegram → Results published to GitHub → Hermes synthesizes into dashboard</p>
+        <p><strong>006 Access:</strong> @Nono006_Bot on Telegram · GitHub token active · Brain files on fork</p>
       </div>
     </div>
 
