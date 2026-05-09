@@ -6,6 +6,14 @@
   <title>Niah — Madrid B2B Events</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --ivory: #F7F1E8;
+      --espresso: #241C17;
+      --terracotta: #B86A4B;
+      --olive: #8A846F;
+      --oat: #E7D8C7;
+      --gold: #D7A85E;
+    }
     body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #0d0d0d; color: #e8e0d5; min-height: 100vh; }
     .container { max-width: 1200px; margin: 0 auto; padding: 40px 24px; }
 
@@ -15,6 +23,28 @@
     h1 span { color: #e05d2a; }
     .tagline { color: #888; font-size: 1rem; margin-top: 8px; }
     .divider { width: 60px; height: 2px; background: #e05d2a; margin: 20px auto; }
+
+    /* Brand palette preview section */
+    .palette-section { background: var(--oat); border-radius: 16px; padding: 32px; margin-bottom: 40px; }
+    .palette-header { text-align: center; margin-bottom: 24px; }
+    .palette-header h2 { font-size: 1.4rem; color: var(--espresso); margin-bottom: 8px; }
+    .palette-header p { font-size: 0.9rem; color: var(--olive); }
+    .palette-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 12px; }
+    .palette-swatch { border-radius: 12px; overflow: hidden; text-align: center; }
+    .palette-color { height: 80px; }
+    .palette-label { font-size: 0.65rem; font-weight: 600; padding: 8px 4px; color: var(--espresso); background: #fff; line-height: 1.4; }
+    .palette-hex { font-family: monospace; font-size: 0.6rem; color: var(--olive); }
+
+    /* Proposal teaser */
+    .proposal-teaser { background: var(--ivory); border-radius: 16px; padding: 40px; margin-bottom: 40px; color: var(--espresso); }
+    .proposal-teaser .pt-badge { background: var(--terracotta); color: #fff; font-size: 0.7rem; font-weight: 600; padding: 3px 10px; border-radius: 20px; display: inline-block; margin-bottom: 16px; }
+    .proposal-teaser h2 { font-size: 1.8rem; font-weight: 700; margin-bottom: 12px; color: var(--espresso); }
+    .proposal-teaser p { font-size: 1rem; color: var(--olive); line-height: 1.7; max-width: 600px; margin-bottom: 24px; }
+    .proposal-teaser .pt-target { font-size: 0.8rem; color: var(--olive); }
+    .proposal-teaser .pt-target strong { color: var(--espresso); }
+    .proposal-actions { display: flex; gap: 12px; margin-top: 20px; }
+    .btn-primary { background: var(--terracotta); color: #fff; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 0.9rem; }
+    .btn-secondary { background: transparent; color: var(--terracotta); padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 0.9rem; border: 2px solid var(--terracotta); }
 
     .mission { background: #1a1a1a; border: 1px solid #2a2a2a; border-radius: 12px; padding: 24px; margin-bottom: 40px; }
     .mission h2 { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; color: #e05d2a; margin-bottom: 8px; }
@@ -145,6 +175,56 @@
       <p class="tagline">B2B Event Networking — Madrid Market</p>
       <div class="divider"></div>
     </header>
+
+    <!-- Brand Palette Preview -->
+    <div class="palette-section">
+      <div class="palette-header">
+        <h2>Brand Identity — Niah</h2>
+        <p>Warm, human, intentional. Not corporate. Built for B2B events in Madrid.</p>
+      </div>
+      <div class="palette-grid">
+        <div class="palette-swatch">
+          <div class="palette-color" style="background:#F7F1E8;"></div>
+          <div class="palette-label">Warm Ivory<BR><span class="palette-hex">#F7F1E8</span></div>
+        </div>
+        <div class="palette-swatch">
+          <div class="palette-color" style="background:#241C17;"></div>
+          <div class="palette-label" style="background:#241C17;color:#F7F1E8;">Deep Espresso<span class="palette-hex">#241C17</span></div>
+        </div>
+        <div class="palette-swatch">
+          <div class="palette-color" style="background:#B86A4B;"></div>
+          <div class="palette-label" style="background:#B86A4B;color:#fff;">Terracotta<span class="palette-hex">#B86A4B</span></div>
+        </div>
+        <div class="palette-swatch">
+          <div class="palette-color" style="background:#8A846F;"></div>
+          <div class="palette-label">Olive Taupe<span class="palette-hex">#8A846F</span></div>
+        </div>
+        <div class="palette-swatch">
+          <div class="palette-color" style="background:#E7D8C7;"></div>
+          <div class="palette-label">Oat<span class="palette-hex">#E7D8C7</span></div>
+        </div>
+        <div class="palette-swatch">
+          <div class="palette-color" style="background:#D7A85E;"></div>
+          <div class="palette-label">Muted Gold<span class="palette-hex">#D7A85E</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- South Summit Proposal Teaser -->
+    <div class="proposal-teaser">
+      <div class="pt-badge">Proposal Ready</div>
+      <h2>South Summit Madrid — AI Matchmaking Pilot</h2>
+      <p>Niah offers AI-powered networking for 20,000 attendees at South Summit (June 3-5, La Nave). Zero cost pilot in exchange for case study + feedback. Targeting investors, startups, and corporations — the exact networking problem South Summit already owns.</p>
+      <div class="pt-target">
+        <strong>To:</strong> South Summit Partnerships Team<br>
+        <strong>Contact:</strong> info@southsummit.io · partners@southsummit.io<br>
+        <strong>CC:</strong> strategic partners (IE University, Google for Startups, Wayra)
+      </div>
+      <div class="proposal-actions">
+        <a class="btn-primary" href="https://www.southsummit.io/en/content/partnerships" target="_blank">View Partnership Options</a>
+        <a class="btn-secondary" href="mailto:partners@southsummit.io">Send Proposal Email</a>
+      </div>
+    </div>
 
     <div class="mission">
       <h2>Mission</h2>
