@@ -23,39 +23,61 @@
     .section-header { display: flex; align-items: center; gap: 12px; margin-bottom: 20px; margin-top: 40px; }
     .section-header h2 { font-size: 1.3rem; font-weight: 600; }
     .badge { background: #e05d2a; color: #fff; font-size: 0.7rem; font-weight: 600; padding: 2px 8px; border-radius: 20px; }
-    .badge.green { background: #2a5a2a; color: #4ade80; }
 
-    /* Two-column layout for leads */
-    .leads-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 48px; }
-    @media (max-width: 768px) { .leads-layout { grid-template-columns: 1fr; } }
+    /* Leads grid */
+    .leads-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(360px, 1fr)); gap: 20px; margin-bottom: 48px; }
+    @media (max-width: 768px) { .leads-grid { grid-template-columns: 1fr; } }
 
-    /* Org blocks */
-    .org-block { background: #1a1a1a; border: 1px solid #2a2a2a; border-radius: 12px; padding: 20px; }
-    .org-header { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; padding-bottom: 12px; border-bottom: 1px solid #2a2a2a; }
-    .org-icon { width: 32px; height: 32px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 1rem; flex-shrink: 0; }
-    .org-name { font-size: 1rem; font-weight: 700; color: #e8e0d5; }
-    .org-type { font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.08em; padding: 2px 7px; border-radius: 4px; font-weight: 600; flex-shrink: 0; }
-    .venue { background: #2a2a1a; color: #c9a227; }
-    .organizer { background: #1a2a2a; color: #27a8a8; }
-    .conference { background: #2a1a2a; color: #a827a8; }
-    .association { background: #2a2a2a; color: #888; }
+    /* Org card */
+    .org-card { background: #1a1a1a; border-radius: 12px; overflow: hidden; }
 
-    /* Contact rows */
-    .contact-row { margin-bottom: 14px; }
-    .contact-row:last-child { margin-bottom: 0; }
-    .contact-name { font-size: 0.9rem; font-weight: 600; color: #e8e0d5; margin-bottom: 2px; }
-    .contact-title { font-size: 0.78rem; color: #666; margin-bottom: 4px; }
-    .contact-links { display: flex; flex-wrap: wrap; gap: 8px; }
-    .contact-link { font-size: 0.75rem; color: #888; text-decoration: none; border: 1px solid #333; padding: 2px 8px; border-radius: 4px; transition: all 0.2s; }
-    .contact-link:hover { border-color: #e05d2a; color: #e05d2a; }
-    .contact-link.email { border-color: #3a3a2a; color: #c9a227; }
-    .contact-link.email:hover { border-color: #c9a227; }
-    .contact-note { font-size: 0.75rem; color: #555; margin-top: 4px; font-style: italic; }
+    /* Org header — colored by company */
+    .org-header { padding: 14px 18px; display: flex; align-items: center; gap: 10px; }
+    .org-header .org-logo { width: 28px; height: 28px; border-radius: 6px; display: flex; align-items: center; justify-content: center; font-size: 0.9rem; flex-shrink: 0; }
+    .org-header .org-name { font-size: 0.95rem; font-weight: 700; color: #fff; }
+    .org-header .org-meta { margin-left: auto; font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.08em; padding: 2px 7px; border-radius: 4px; font-weight: 600; opacity: 0.85; }
 
-    /* Why box */
-    .why-box { background: #141414; border: 1px solid #222; border-radius: 8px; padding: 10px 14px; margin-top: 12px; }
-    .why-label { font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.1em; color: #e05d2a; margin-bottom: 4px; font-weight: 600; }
-    .why-text { font-size: 0.8rem; color: #888; line-height: 1.5; }
+    /* Company color themes */
+    .ifema   .org-header { background: #2a2218; }
+    .ifema   .org-header .org-meta { background: #3a3020; color: #c9a227; }
+    .crea    .org-header { background: #0d2a2a; }
+    .crea    .org-header .org-meta { background: #0a3a3a; color: #27c8c8; }
+    .closer  .org-header { background: #2a1010; }
+    .closer  .org-header .org-meta { background: #3a1515; color: #e06060; }
+    .mer     .org-header { background: #0d2a10; }
+    .mer     .org-header .org-meta { background: #0a3a15; color: #4ade80; }
+    .tech    .org-header { background: #1a1030; }
+    .tech    .org-header .org-meta { background: #251540; color: #a87fff; }
+    .night   .org-header { background: #2a1a08; }
+    .night   .org-header .org-meta { background: #3a2510; color: #e09030; }
+    .ametic  .org-header { background: #1a1a1a; }
+    .ametic  .org-header .org-meta { background: #2a2a2a; color: #999; }
+    .cofm    .org-header { background: #101828; }
+    .cofm    .org-header .org-meta { background: #152035; color: #6090c0; }
+    .sef     .org-header { background: #181818; }
+    .sef     .org-header .org-meta { background: #252525; color: #777; }
+
+    /* Contact people */
+    .people { padding: 14px 18px; }
+    .person { margin-bottom: 14px; }
+    .person:last-child { margin-bottom: 0; }
+    .person-name { font-size: 0.88rem; font-weight: 600; color: #e8e0d5; margin-bottom: 2px; }
+    .person-title { font-size: 0.75rem; color: #666; margin-bottom: 6px; }
+    .person-links { display: flex; flex-wrap: wrap; gap: 6px; }
+    .person-link { font-size: 0.72rem; color: #888; text-decoration: none; border: 1px solid #333; padding: 2px 7px; border-radius: 4px; transition: all 0.15s; }
+    .person-link:hover { border-color: #e05d2a; color: #e05d2a; }
+    .person-link.email { border-color: #3a3020; color: #c9a227; }
+    .person-link.email:hover { border-color: #c9a227; }
+    .person-note { font-size: 0.72rem; color: #555; margin-top: 4px; font-style: italic; }
+    .person-why { background: #141414; border-radius: 6px; padding: 8px 10px; margin-top: 6px; }
+    .why-tag { font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.1em; color: #e05d2a; font-weight: 700; margin-bottom: 3px; }
+    .why-text { font-size: 0.75rem; color: #888; line-height: 1.5; }
+
+    /* Level tag */
+    .level { display: inline-block; font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.06em; padding: 1px 5px; border-radius: 3px; font-weight: 600; margin-left: 6px; vertical-align: middle; }
+    .level-top { background: #2a1515; color: #e06060; }
+    .level-mid { background: #1a2020; color: #70a0a0; }
+    .level-entry { background: #1a1a1a; color: #555; }
 
     /* Competitor cards */
     .comp-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; margin-bottom: 48px; }
@@ -81,14 +103,6 @@
     @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
     .research-task { font-size: 0.9rem; color: #bbb; flex: 1; }
     .research-agent { font-size: 0.75rem; color: #666; }
-
-    /* Priority tiers */
-    .tier-header { display: flex; align-items: center; gap: 10px; margin: 32px 0 14px 0; }
-    .tier-num { width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.8rem; font-weight: 700; flex-shrink: 0; }
-    .t1 { background: #e05d2a; color: #fff; }
-    .t2 { background: #2a2a2a; color: #888; border: 1px solid #444; }
-    .tier-label { font-size: 1rem; font-weight: 600; }
-    .tier-desc { font-size: 0.8rem; color: #666; margin-left: auto; }
 
     .outreach-placeholder { background: #1a1a1a; border: 1px solid #2a2a2a; border-radius: 12px; padding: 32px; text-align: center; color: #555; font-size: 0.9rem; margin-bottom: 48px; }
     footer { text-align: center; color: #444; font-size: 0.75rem; padding-top: 32px; border-top: 1px solid #1a1a1a; margin-top: 48px; }
@@ -119,242 +133,229 @@
       <p>AI matchmaking + micro-experiences for B2B conference attendees in Madrid. First target: Q3-Q4 2026 IFEMA events. Pilot with 1-2 organizers, prove ROI, expand to pharma/tech/finance associations.</p>
     </div>
 
-    <!-- PRIORITY TIERS -->
-    <div class="tier-header">
-      <div class="tier-num t1">1</div>
-      <span class="tier-label">Tier 1 — Highest leverage, move now</span>
-      <span class="tier-desc">5 contacts</span>
+    <!-- Leads -->
+    <div class="section-header">
+      <h2>👥 Lead Targets</h2>
+      <span class="badge">9 orgs · 13 contacts</span>
     </div>
+    <div class="leads-grid">
 
-    <div class="leads-layout">
-      <!-- IFEMA -->
-      <div class="org-block">
+      <!-- ===== IFEMA ===== -->
+      <div class="org-card ifema">
         <div class="org-header">
-          <div class="org-icon">🏛️</div>
-          <span class="org-name">IFEMA (Feria de Madrid)</span>
-          <span class="org-type venue">Venue</span>
+          <div class="org-logo">🏛️</div>
+          <span class="org-name">IFEMA — Feria de Madrid</span>
+          <span class="org-meta">Venue</span>
         </div>
-        <div class="contact-row">
-          <div class="contact-name">Lola González Barbado</div>
-          <div class="contact-title">Business Development & Innovation</div>
-          <div class="contact-links">
-            <a class="contact-link" href="https://es.linkedin.com/in/lolagonzalezbarbado" target="_blank">LinkedIn</a>
-            <a class="contact-link" href="https://www.ifema.es/en/contact" target="_blank">ifema.es/contact</a>
+        <div class="people">
+          <div class="person">
+            <div class="person-name">Lola González Barbado <span class="level level-top">Top</span></div>
+            <div class="person-title">Business Development & Innovation</div>
+            <div class="person-links">
+              <a class="person-link" href="https://es.linkedin.com/in/lolagonzalezbarbado" target="_blank">LinkedIn</a>
+              <a class="person-link" href="https://www.ifema.es/en/contact" target="_blank">Contact</a>
+            </div>
+            <div class="person-why"><div class="why-tag">Why reach out</div><div class="why-text">Partnership = access to 70+ events/year. Innovation angle, not day-to-day ops.</div></div>
           </div>
-          <div class="why-box">
-            <div class="why-label">Why reach out</div>
-            <div class="why-text">Partnership with IFEMA = access to 70+ events/year. New business angle, not day-to-day ops — innovation initiatives.</div>
+          <div class="person">
+            <div class="person-name">Esther Jiménez <span class="level level-mid">Mid</span></div>
+            <div class="person-title">Commercial Trade Show Manager</div>
+            <div class="person-links">
+              <a class="person-link" href="https://es.linkedin.com/in/esther-jim%C3%A9nez-646486165" target="_blank">LinkedIn</a>
+            </div>
+            <div class="person-note">Runs trade show operations — best for piloting with a specific event.</div>
           </div>
-        </div>
-        <div class="contact-row">
-          <div class="contact-name">Esther Jiménez</div>
-          <div class="contact-title">Commercial Trade Show Manager</div>
-          <div class="contact-links">
-            <a class="contact-link" href="https://es.linkedin.com/in/esther-jim%C3%A9nez-646486165" target="_blank">LinkedIn</a>
-          </div>
-          <div class="contact-note">Best for piloting with a specific event — she runs trade show operations.</div>
         </div>
       </div>
 
-      <!-- CREA Group -->
-      <div class="org-block">
+      <!-- ===== CREA GROUP ===== -->
+      <div class="org-card crea">
         <div class="org-header">
-          <div class="org-icon">🎪</div>
+          <div class="org-logo">🎪</div>
           <span class="org-name">CREA Group</span>
-          <span class="org-type organizer">Organizer</span>
+          <span class="org-meta">Organizer</span>
         </div>
-        <div class="contact-row">
-          <div class="contact-name">Borja Llopart</div>
-          <div class="contact-title">Director — 20+ years in corporate events</div>
-          <div class="contact-links">
-            <a class="contact-link" href="https://es.linkedin.com/in/borja-llopart-0a04a236" target="_blank">LinkedIn</a>
-            <a class="contact-link email" href="mailto:rrhh@creagroupevents.com">rrhh@creagroupevents.com</a>
+        <div class="people">
+          <div class="person">
+            <div class="person-name">Borja Llopart <span class="level level-top">Top</span></div>
+            <div class="person-title">Director — 20+ years in corporate events</div>
+            <div class="person-links">
+              <a class="person-link" href="https://es.linkedin.com/in/borja-llopart-0a04a236" target="_blank">LinkedIn</a>
+              <a class="person-link email" href="mailto:rrhh@creagroupevents.com">rrhh@creagroupevents.com</a>
+            </div>
+            <div class="person-why"><div class="why-tag">Why reach out</div><div class="why-text">Large-scale trade shows + corporate events across Madrid/Barcelona. HR email = warm intro path.</div></div>
           </div>
-          <div class="why-box">
-            <div class="why-label">Why reach out</div>
-            <div class="why-text">Handles large-scale trade shows + corporate events across Madrid/Barcelona. Strong network, decision-maker, HR email is warm intro path.</div>
+          <div class="person">
+            <div class="person-name">Fatima Zahra Adnane <span class="level level-mid">Mid</span></div>
+            <div class="person-title">Events & Digital</div>
+            <div class="person-links">
+              <a class="person-link" href="https://es.linkedin.com/in/fatima-zahra-adnane-437801181" target="_blank">LinkedIn</a>
+            </div>
+            <div class="person-note">More tech-forward — more open to AI tools than senior management.</div>
           </div>
-        </div>
-        <div class="contact-row">
-          <div class="contact-name">Fatima Zahra Adnane</div>
-          <div class="contact-title">Events & Digital</div>
-          <div class="contact-links">
-            <a class="contact-link" href="https://es.linkedin.com/in/fatima-zahra-adnane-437801181" target="_blank">LinkedIn</a>
-          </div>
-          <div class="contact-note">Digital/events angle — more tech-forward, may be more open to AI tools.</div>
         </div>
       </div>
 
-      <!-- CloserStill Media Spain -->
-      <div class="org-block">
+      <!-- ===== CLOSERSTILL MEDIA ===== -->
+      <div class="org-card closer">
         <div class="org-header">
-          <div class="org-icon">💊</div>
+          <div class="org-logo">🟥</div>
           <span class="org-name">CloserStill Media — Spain</span>
-          <span class="org-type organizer">Organizer</span>
+          <span class="org-meta">Organizer</span>
         </div>
-        <div class="contact-row">
-          <div class="contact-name">Agustin Torres</div>
-          <div class="contact-title">Managing Director — Spain | 30 years in events</div>
-          <div class="contact-links">
-            <a class="contact-link" href="https://es.linkedin.com/in/agustin-torres-31852133" target="_blank">LinkedIn</a>
-            <a class="contact-link" href="https://www.closerstillmedia.com/ourpeoplelibrary/interview-agustin-torres" target="_blank">Profile</a>
+        <div class="people">
+          <div class="person">
+            <div class="person-name">Agustin Torres <span class="level level-top">Top</span></div>
+            <div class="person-title">Managing Director — Spain | 30 years in events</div>
+            <div class="person-links">
+              <a class="person-link" href="https://es.linkedin.com/in/agustin-torres-31852133" target="_blank">LinkedIn</a>
+              <a class="person-link" href="https://www.closerstillmedia.com/ourpeoplelibrary/interview-agustin-torres" target="_blank">Profile</a>
+            </div>
+            <div class="person-why"><div class="why-tag">Why reach out</div><div class="why-text">#1 decision-maker for CloserStill in Spain. Email infarma@closerstillmedia.com and ask for Agustin.</div></div>
           </div>
-          <div class="why-box">
-            <div class="why-label">Why reach out</div>
-            <div class="why-text">#1 decision-maker for CloserStill in Spain. Runs INFARMA + all Spain events. Email infarma@closerstillmedia.com and ask for Agustin.</div>
+          <div class="person">
+            <div class="person-name">Simon Blazeby <span class="level level-top">Top</span></div>
+            <div class="person-title">Managing Director — Events & Marketing (Global)</div>
+            <div class="person-links">
+              <a class="person-link" href="https://uk.linkedin.com/in/simonblazeby" target="_blank">LinkedIn</a>
+            </div>
+            <div class="person-note">Global MD — posted about Madrid Tech Show himself. Strong personal connection to Spain events.</div>
           </div>
-        </div>
-        <div class="contact-row">
-          <div class="contact-name">Marina Castillo</div>
-          <div class="contact-title">Events Operations Manager — Madrid</div>
-          <div class="contact-links">
-            <a class="contact-link" href="https://es.linkedin.com/in/marinacastillomedina" target="_blank">LinkedIn</a>
-            <a class="contact-link email" href="mailto:infarma@closerstillmedia.com">infarma@closerstillmedia.com</a>
+          <div class="person">
+            <div class="person-name">Marina Castillo <span class="level level-mid">Mid</span></div>
+            <div class="person-title">Events Operations Manager — Madrid</div>
+            <div class="person-links">
+              <a class="person-link" href="https://es.linkedin.com/in/marinacastillomedina" target="_blank">LinkedIn</a>
+              <a class="person-link email" href="mailto:infarma@closerstillmedia.com">infarma@closerstillmedia.com</a>
+            </div>
+            <div class="person-note">Ops/logistics side — good for pilot execution conversations.</div>
           </div>
-          <div class="contact-note">Ops side — handles logistics. Good for pilot execution conversations.</div>
-        </div>
-        <div class="contact-row">
-          <div class="contact-name">Lucía Camarillo Gómez</div>
-          <div class="contact-title">Events Marketing Manager</div>
-          <div class="contact-links">
-            <a class="contact-link" href="https://uk.linkedin.com/in/luciacamarillogomez" target="_blank">LinkedIn</a>
-          </div>
-          <div class="contact-note">Marketing angle — can present Niah as a sponsorship/innovation tool to their events.</div>
-        </div>
-      </div>
-
-      <!-- COFM (Congress side of INFARMA) -->
-      <div class="org-block">
-        <div class="org-header">
-          <div class="org-icon">🏥</div>
-          <span class="org-name">Colegio Oficial Farmacéuticos Madrid (COFM)</span>
-          <span class="org-type association">Association</span>
-        </div>
-        <div class="contact-row">
-          <div class="contact-name">COFM — Professional Congress</div>
-          <div class="contact-title">Runs academic/scientific program for INFARMA</div>
-          <div class="contact-links">
-            <a class="contact-link email" href="mailto:infarmamadrid@cofm.es">infarmamadrid@cofm.es</a>
-            <a class="contact-link" href="https://www.infarma.es/en" target="_blank">infarma.es</a>
-          </div>
-          <div class="why-box">
-            <div class="why-label">Why reach out</div>
-            <div class="why-text">INFARMA 2027: March 16-18, 15,000+ pharmacy attendees. COFM handles the professional congress — different angle than CloserStill (academic vs. commercial).</div>
+          <div class="person">
+            <div class="person-name">Lucía Camarillo Gómez <span class="level level-mid">Mid</span></div>
+            <div class="person-title">Events Marketing Manager</div>
+            <div class="person-links">
+              <a class="person-link" href="https://uk.linkedin.com/in/luciacamarillogomez" target="_blank">LinkedIn</a>
+            </div>
+            <div class="person-note">Marketing angle — can present Niah as sponsorship/innovation tool.</div>
           </div>
         </div>
       </div>
 
-      <!-- Meridional Events -->
-      <div class="org-block">
+      <!-- ===== MERIDIONAL EVENTS ===== -->
+      <div class="org-card mer">
         <div class="org-header">
-          <div class="org-icon">🏁</div>
+          <div class="org-logo">🏁</div>
           <span class="org-name">Meridional Events DMC</span>
-          <span class="org-type organizer">Organizer</span>
+          <span class="org-meta">Organizer</span>
         </div>
-        <div class="contact-row">
-          <div class="contact-name">Rubén M. Cenzano</div>
-          <div class="contact-title">Director</div>
-          <div class="contact-links">
-            <a class="contact-link" href="https://www.linkedin.com/in/rubenmcenzano/" target="_blank">LinkedIn</a>
-            <a class="contact-link" href="https://www.meridionalevents.com/en/contact/" target="_blank">Website</a>
-          </div>
-          <div class="why-box">
-            <div class="why-label">Why reach out</div>
-            <div class="why-text">DMC specializing in conferences, product launches, gala dinners — matches Niah use case exactly. Direct decision-maker.</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Tech Show Madrid -->
-      <div class="org-block">
-        <div class="org-header">
-          <div class="org-icon">💻</div>
-          <span class="org-name">Tech Show Madrid 2026</span>
-          <span class="org-type conference">Conference</span>
-        </div>
-        <div class="contact-row">
-          <div class="contact-name">Ali Parandeh Zandpour</div>
-          <div class="contact-title">Founder / Organizer</div>
-          <div class="contact-links">
-            <a class="contact-link" href="https://es.linkedin.com/in/aliparandeh" target="_blank">LinkedIn</a>
-            <a class="contact-link" href="https://www.techshowmadrid.es/en" target="_blank">techshowmadrid.es</a>
-          </div>
-          <div class="why-box">
-            <div class="why-label">Why reach out</div>
-            <div class="why-text">Tech crowd = early adopters for AI matchmaking. Founder = direct decision-maker, no gatekeepers.</div>
+        <div class="people">
+          <div class="person">
+            <div class="person-name">Rubén M. Cenzano <span class="level level-top">Top</span></div>
+            <div class="person-title">Director</div>
+            <div class="person-links">
+              <a class="person-link" href="https://www.linkedin.com/in/rubenmcenzano/" target="_blank">LinkedIn</a>
+              <a class="person-link" href="https://www.meridionalevents.com/en/contact/" target="_blank">Website</a>
+            </div>
+            <div class="person-why"><div class="why-tag">Why reach out</div><div class="why-text">DMC: conferences, product launches, gala dinners — matches Niah use case exactly. Direct decision-maker.</div></div>
           </div>
         </div>
       </div>
 
-      <!-- Nightlife Madrid -->
-      <div class="org-block">
+      <!-- ===== TECH SHOW MADRID ===== -->
+      <div class="org-card tech">
         <div class="org-header">
-          <div class="org-icon">🌙</div>
+          <div class="org-logo">💻</div>
+          <span class="org-name">Tech Show Madrid</span>
+          <span class="org-meta">Conference</span>
+        </div>
+        <div class="people">
+          <div class="person">
+            <div class="person-name">Ali Parandeh Zandpour <span class="level level-top">Top</span></div>
+            <div class="person-title">Founder / Organizer</div>
+            <div class="person-links">
+              <a class="person-link" href="https://es.linkedin.com/in/aliparandeh" target="_blank">LinkedIn</a>
+              <a class="person-link" href="https://www.techshowmadrid.es/en" target="_blank">Website</a>
+            </div>
+            <div class="person-why"><div class="why-tag">Why reach out</div><div class="why-text">Tech crowd = early adopters. Founder = direct decision, no gatekeepers.</div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== NIGHTLIFE MADRID ===== -->
+      <div class="org-card night">
+        <div class="org-header">
+          <div class="org-logo">🌙</div>
           <span class="org-name">Nightlife Madrid</span>
-          <span class="org-type organizer">Organizer</span>
+          <span class="org-meta">Organizer</span>
         </div>
-        <div class="contact-row">
-          <div class="contact-name">Beatriz Alvarez</div>
-          <div class="contact-title">Corporate Events Manager / Business Development</div>
-          <div class="contact-links">
-            <a class="contact-link" href="https://es.linkedin.com/in/balvarec" target="_blank">LinkedIn</a>
-            <a class="contact-link" href="https://nightlifemadrid.com/corporate-events-madrid/" target="_blank">Website</a>
-          </div>
-          <div class="why-box">
-            <div class="why-label">Why reach out</div>
-            <div class="why-text">Corporate + government events in Madrid. BD person = revenue-focused, open to tools that improve client outcomes.</div>
+        <div class="people">
+          <div class="person">
+            <div class="person-name">Beatriz Alvarez <span class="level level-mid">Mid</span></div>
+            <div class="person-title">Corporate Events Manager / Business Development</div>
+            <div class="person-links">
+              <a class="person-link" href="https://es.linkedin.com/in/balvarec" target="_blank">LinkedIn</a>
+              <a class="person-link" href="https://nightlifemadrid.com/corporate-events-madrid/" target="_blank">Website</a>
+            </div>
+            <div class="person-why"><div class="why-tag">Why reach out</div><div class="why-text">Corporate + government events. BD person = revenue-focused, open to tools that improve client outcomes.</div></div>
           </div>
         </div>
       </div>
 
-    </div>
-
-    <!-- Tier 2 -->
-    <div class="tier-header">
-      <div class="tier-num t2">2</div>
-      <span class="tier-label">Tier 2 — Secondary targets</span>
-      <span class="tier-desc">2 contacts</span>
-    </div>
-
-    <div class="leads-layout">
-
-      <!-- AMETIC -->
-      <div class="org-block">
+      <!-- ===== AMETIC ===== -->
+      <div class="org-card ametic">
         <div class="org-header">
-          <div class="org-icon">⚡</div>
+          <div class="org-logo">⚡</div>
           <span class="org-name">AMETIC</span>
-          <span class="org-type association">Association</span>
+          <span class="org-meta">Association</span>
         </div>
-        <div class="contact-row">
-          <div class="contact-name">Antonio Cimorra</div>
-          <div class="contact-title">Digital Agenda Director — AMETIC (tech association)</div>
-          <div class="contact-links">
-            <a class="contact-link" href="https://www.incibe.es/index.php/en/events/speakers/antonio-cimorra-digital-agenda-director-ametic" target="_blank">Profile</a>
-            <a class="contact-link" href="https://ametic.es" target="_blank">ametic.es</a>
-          </div>
-          <div class="why-box">
-            <div class="why-label">Why reach out</div>
-            <div class="why-text">Major Spanish tech association. Runs AI Summits and tech events — could be a channel partner or early adopter for Niah.</div>
+        <div class="people">
+          <div class="person">
+            <div class="person-name">Antonio Cimorra <span class="level level-mid">Mid</span></div>
+            <div class="person-title">Digital Agenda Director</div>
+            <div class="person-links">
+              <a class="person-link" href="https://www.incibe.es/index.php/en/events/speakers/antonio-cimorra-digital-agenda-director-ametic" target="_blank">Profile</a>
+              <a class="person-link" href="https://ametic.es" target="_blank">ametic.es</a>
+            </div>
+            <div class="person-why"><div class="why-tag">Why reach out</div><div class="why-text">Major Spanish tech association. Runs AI Summits — could be channel partner or early adopter for Niah.</div></div>
           </div>
         </div>
       </div>
 
-      <!-- Spanish Pharmacology Society -->
-      <div class="org-block">
+      <!-- ===== COFM ===== -->
+      <div class="org-card cofm">
         <div class="org-header">
-          <div class="org-icon">🧬</div>
-          <span class="org-name">Spanish Society of Pharmacology (SEF)</span>
-          <span class="org-type association">Association</span>
+          <div class="org-logo">🏥</div>
+          <span class="org-name">Colegio Oficial Farmacéuticos Madrid</span>
+          <span class="org-meta">Association</span>
         </div>
-        <div class="contact-row">
-          <div class="contact-name">Annual Meeting 2026</div>
-          <div class="contact-title">Sept 2-4, 2026 — 1,000+ pharmacology professionals</div>
-          <div class="contact-links">
-            <a class="contact-link" href="https://www.socesfar.es/en/xllll-national-sef-congres-info/" target="_blank">Event info</a>
+        <div class="people">
+          <div class="person">
+            <div class="person-name">COFM Congress Team <span class="level level-mid">Mid</span></div>
+            <div class="person-title">Runs academic/scientific program for INFARMA</div>
+            <div class="person-links">
+              <a class="person-link email" href="mailto:infarmamadrid@cofm.es">infarmamadrid@cofm.es</a>
+              <a class="person-link" href="https://www.infarma.es/en" target="_blank">infarma.es</a>
+            </div>
+            <div class="person-why"><div class="why-tag">Why reach out</div><div class="why-text">INFARMA 2027: March 16-18, 15,000+ pharmacy attendees. Different angle from CloserStill — academic vs. commercial.</div></div>
           </div>
-          <div class="why-box">
-            <div class="why-label">Why reach out</div>
-            <div class="why-text">Recurring annual conference — predictable pipeline. Medical/pharma sector = high networking need. Contact through sociedad directly.</div>
+        </div>
+      </div>
+
+      <!-- ===== SEF ===== -->
+      <div class="org-card sef">
+        <div class="org-header">
+          <div class="org-logo">🧬</div>
+          <span class="org-name">Spanish Society of Pharmacology (SEF)</span>
+          <span class="org-meta">Association</span>
+        </div>
+        <div class="people">
+          <div class="person">
+            <div class="person-name">SEF Annual Meeting 2026 <span class="level level-entry">Entry</span></div>
+            <div class="person-title">Sept 2-4, 2026 · 1,000+ pharmacology professionals</div>
+            <div class="person-links">
+              <a class="person-link" href="https://www.socesfar.es/en/xllll-national-sef-congres-info/" target="_blank">Event info</a>
+            </div>
+            <div class="person-why"><div class="why-tag">Why reach out</div><div class="why-text">Recurring annual conference — predictable pipeline. Medical/pharma = high networking need.</div></div>
           </div>
         </div>
       </div>
@@ -421,7 +422,7 @@
       <h2>🔬 Research Pipeline</h2>
     </div>
     <div class="research-card">
-      <div class="research-row"><div class="status-dot done"></div><span class="research-task">Lead list expanded — 10 contacts across 7 orgs with LinkedIn + outreach angles</span><span class="research-agent">Hermes 007</span></div>
+      <div class="research-row"><div class="status-dot done"></div><span class="research-task">Lead list — 9 orgs · 13 contacts, organized by company</span><span class="research-agent">Hermes 007</span></div>
       <div class="research-row"><div class="status-dot done"></div><span class="research-task">Competitive landscape — Brella / Swapcard / Grip analysis</span><span class="research-agent">Nanobot 006</span></div>
       <div class="research-row"><div class="status-dot in-progress"></div><span class="research-task">Brella / Swapcard negative news — client losses, staff cuts</span><span class="research-agent">Nanobot 006</span></div>
       <div class="research-row"><div class="status-dot todo"></div><span class="research-task">IFEMA Q3-Q4 2026 full event calendar</span><span class="research-agent">Hermes 007</span></div>
