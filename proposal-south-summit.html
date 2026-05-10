@@ -543,7 +543,7 @@
   <div class="page-header">
     <div class="section-label">Section 02</div>
     <h2>Scope of Partnership</h2>
-    <div class="page-subtitle">What we provide, and what we ask South Summit to sponsor</div>
+    <div class="page-subtitle">What we provide to South Summit — at no cost to them</div>
   </div>
 
   <div class="page-content">
@@ -596,56 +596,56 @@
 
     <div class="section-title">
       <div class="section-number">3</div>
-      <h3>Tool Infrastructure — Sponsored by South Summit</h3>
+      <h3>Tool Infrastructure — Actual Stack</h3>
     </div>
     <p class="intro-text" style="margin-bottom:20px;">
-      To operate at South Summit scale (20,000 recipients, 3 days, international audience), Niah requires the following tool infrastructure. We ask South Summit to sponsor these costs as part of the partnership agreement.
+      For 50–150 South Summit Social Summit attendees (the actual after-party scale), the tool stack is simple. Niah covers all costs — no sponsorship needed from South Summit.
     </p>
 
     <div class="tool-grid">
       <div class="tool-card">
-        <div class="tool-icon">📧</div>
-        <h5>Email Automation Platform</h5>
-        <p>Brevo (formerly Sendinblue) — 20,000 daily match notifications over 3 days. Includes email templates, deliverability optimization, and GDPR consent management.</p>
-        <div class="tool-cost">€ 890 / month × 2 = €1,780</div>
+        <div class="tool-icon">📋</div>
+        <h5>Tally Survey</h5>
+        <p>Survey form (9 fields) — collects name, email, role, who to meet, what you can offer. Unlimited submissions, free tier.</p>
+        <div class="tool-cost">$0 (free tier)</div>
+      </div>
+      <div class="tool-card">
+        <div class="tool-icon">⚡</div>
+        <h5>n8n Automation</h5>
+        <p>18-node workflow — handles Tally webhook → Google Sheets → Mailchimp → WhatsApp notifications. Runs the full matching flow.</p>
+        <div class="tool-cost">$59 / month (Pro)</div>
+      </div>
+      <div class="tool-card">
+        <div class="tool-icon">✉️</div>
+        <h5>Mailchimp Email</h5>
+        <p>Email list management + email sends (survey invite, reminders, match notifications). Standard plan for up to 5K contacts.</p>
+        <div class="tool-cost">$59 / month (Standard)</div>
       </div>
       <div class="tool-card">
         <div class="tool-icon">💬</div>
-        <h5>SMS Notifications</h5>
-        <p>Twilio — international SMS delivery for attendees without reliable email. Critical for 134-country audience reach.</p>
-        <div class="tool-cost">€ 420 / month × 2 = €840</div>
-      </div>
-      <div class="tool-card">
-        <div class="tool-icon">🔗</div>
-        <h5>Registration API Integration</h5>
-        <p>Secure attendee data pipeline from South Summit registration system to Niah matching engine. Requires inwink/integration support.</p>
-        <div class="tool-cost">€ 650 (one-time setup)</div>
+        <h5>WhatsApp Business API</h5>
+        <p>Match notifications via WhatsApp — FREE within the 24h window after someone messages Niah first. No cold-send costs.</p>
+        <div class="tool-cost">$0 (free window)</div>
       </div>
       <div class="tool-card">
         <div class="tool-icon">📊</div>
-        <h5>Analytics & BI Dashboard</h5>
-        <p>Metabase or equivalent — real-time event dashboard showing match rates, acceptance rates, attendee satisfaction. Shared with South Summit post-event.</p>
-        <div class="tool-cost">€ 320 (month 1) + €180 = €500</div>
+        <h5>Google Sheets</h5>
+        <p>Matching database — all submissions land here. Matching team fills in match info. n8n reads status changes to trigger notifications.</p>
+        <div class="tool-cost">$0 (free)</div>
       </div>
       <div class="tool-card">
-        <div class="tool-icon">🛡️</div>
-        <h5>GDPR / Legal Compliance</h5>
-        <p>Cookie consent management, data processing agreements, attendee data deletion workflows. Required for EU event operations.</p>
-        <div class="tool-cost">€ 430 (fixed)</div>
-      </div>
-      <div class="tool-card">
-        <div class="tool-icon">🌐</div>
-        <h5>CDN & Hosting</h5>
-        <p>Vercel or Cloudflare — static asset delivery, API edge functions, DDoS protection for match notification service during peak hours.</p>
-        <div class="tool-cost">€ 280 (month 1) + €180 = €460</div>
+        <div class="tool-icon">🔄</div>
+        <h5>Matching + Notifications</h5>
+        <p>Daily email sequence (June 1–5): survey invite → reminders → match notification → post-event satisfaction survey. Fully automated via n8n.</p>
+        <div class="tool-cost">$0 (included in n8n)</div>
       </div>
     </div>
 
     <table class="scope-table" style="margin-top:24px;">
       <tfoot>
         <tr>
-          <td colspan="2">Total Tool Infrastructure (Sponsored by South Summit)</td>
-          <td class="price">€ 4,660</td>
+          <td colspan="2">Total Tool Infrastructure Cost (Niah covers)</td>
+          <td class="price">$118 / month (~$59–$118 for event)</td>
         </tr>
       </tfoot>
     </table>
@@ -683,7 +683,7 @@
         </tr>
         <tr>
           <td><strong>South Summit</strong></td>
-          <td>Sponsor tool infrastructure costs (€4,660) + branded placement in event app/emails + permission to include South Summit in case study</td>
+          <td>Physical space at the after-party (a corner/table) + email promotion to their attendee list + South Summit branding on match notifications + permission to use South Summit in Niah case study</td>
         </tr>
       </tbody>
     </table>
