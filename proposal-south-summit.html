@@ -300,7 +300,18 @@
     }
 
     /* ─── COST BREAKDOWN CARD ─── */
-    .cost-card {
+    .scope-list {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+.scope-list li {
+  padding: 10px 16px;
+  border-left: 3px solid #A65746;
+  margin-bottom: 12px;
+  background: #24201C;
+}
+.cost-card {
       background: var(--bg-secondary);
       border-radius: 12px;
       padding: 24px 28px;
@@ -584,50 +595,15 @@
   <div class="page-content">
     <div class="section-title">
       <div class="section-number">2</div>
-      <h3>What Niah Provides — Free of Charge</h3>
+      <h3>What South Summit Gets</h3>
     </div>
-    <table class="scope-table">
-      <thead>
-        <tr>
-          <th>Deliverable</th>
-          <th>Description</th>
-          <th>Value</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>AI Matchmaking Engine</td>
-          <td>Profile matching algorithm for 20,000 attendees, 3 curated introductions per person per day</td>
-          <td class="price">€4,500</td>
-        </tr>
-        <tr>
-          <td>Dashboard & Reporting</td>
-          <td>Real-time match analytics, meeting acceptance rates, post-event connection quality metrics</td>
-          <td class="price">€1,200</td>
-        </tr>
-        <tr>
-          <td>Match Notifications</td>
-          <td>Email + SMS delivery of daily match recommendations to all attendees</td>
-          <td class="price">€800</td>
-        </tr>
-        <tr>
-          <td>Post-Event Analysis</td>
-          <td>30-day follow-up report with anonymized data for South Summit case study</td>
-          <td class="price">€600</td>
-        </tr>
-        <tr>
-          <td>Branded Integration</td>
-          <td>Co-branded matching interface, event app placement, pre-event email feature</td>
-          <td class="price">€1,000</td>
-        </tr>
-      </tbody>
-      <tfoot>
-        <tr>
-          <td colspan="2">Total Niah Contribution</td>
-          <td class="price">€8,100</td>
-        </tr>
-      </tfoot>
-    </table>
+    <ul class="scope-list">
+      <li><strong>AI Matchmaking</strong> — profile matching algorithm, 3 curated introductions per attendee per day</li>
+      <li><strong>Match Notifications</strong> — email delivery of daily match recommendations</li>
+      <li><strong>Dashboard & Reporting</strong> — real-time analytics, meeting acceptance rates, post-event metrics</li>
+      <li><strong>Post-Event Analysis</strong> — 30-day follow-up report for South Summit case study</li>
+      <li><strong>Branded Integration</strong> — co-branded interface, event app placement, pre-event email feature</li>
+    </ul>
 
     <div class="section-title">
       <div class="section-number">3</div>
