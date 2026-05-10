@@ -299,7 +299,42 @@
       color: var(--text-primary);
     }
 
-    /* ─── TOOLS ─── */
+    /* ─── COST BREAKDOWN CARD ─── */
+    .cost-card {
+      background: var(--bg-secondary);
+      border-radius: 12px;
+      padding: 24px 28px;
+      margin-bottom: 24px;
+      border: 1px solid var(--terracotta);
+    }
+    .cost-card-header {
+      font-family: 'Helvetica Neue', sans-serif;
+      font-size: 0.6rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--terracotta);
+      margin-bottom: 16px;
+    }
+    .cost-row {
+      display: flex;
+      justify-content: space-between;
+      padding: 8px 0;
+      border-bottom: 1px solid var(--bg-primary);
+      font-size: 0.82rem;
+    }
+    .cost-row:last-of-type { border-bottom: none; }
+    .cost-row-label { color: var(--text-muted); }
+    .cost-row-amount { font-weight: 700; color: var(--terracotta); }
+    .cost-total-row {
+      display: flex;
+      justify-content: space-between;
+      padding: 14px 0 0;
+      margin-top: 8px;
+      border-top: 2px solid var(--terracotta);
+      font-weight: 700;
+    }
+    .cost-total-label { font-size: 0.85rem; color: var(--text-primary); }
+    .cost-total-amount { font-size: 1rem; color: var(--terracotta); }
     .tool-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -601,6 +636,35 @@
     <p class="intro-text" style="margin-bottom:20px;">
       For 50–150 South Summit Social Summit attendees (the actual after-party scale), the tool stack is simple. Niah covers all costs — no sponsorship needed from South Summit.
     </p>
+
+    <!-- COST BREAKDOWN -->
+    <div class="cost-card">
+      <div class="cost-card-header">COST BREAKDOWN</div>
+      <div class="cost-row">
+        <span class="cost-row-label">Tally Survey</span>
+        <span class="cost-row-amount">$0</span>
+      </div>
+      <div class="cost-row">
+        <span class="cost-row-label">n8n Cloud Pro (1 month)</span>
+        <span class="cost-row-amount">$59</span>
+      </div>
+      <div class="cost-row">
+        <span class="cost-row-label">Mailchimp Standard (1 month)</span>
+        <span class="cost-row-amount">$59</span>
+      </div>
+      <div class="cost-row">
+        <span class="cost-row-label">WhatsApp Business API</span>
+        <span class="cost-row-amount">$0</span>
+      </div>
+      <div class="cost-row">
+        <span class="cost-row-label">Google Sheets</span>
+        <span class="cost-row-amount">$0</span>
+      </div>
+      <div class="cost-total-row">
+        <span class="cost-total-label">Total</span>
+        <span class="cost-total-amount">~$59–$118</span>
+      </div>
+    </div>
 
     <div class="tool-grid">
       <div class="tool-card">
