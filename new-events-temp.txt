@@ -29,3 +29,21 @@ TARGET: Bank & government tech leaders, CISOs, CTOs
 PRICE: Free
 LINK: https://www.eventbrite.com.ar/e/cybersecurity-bank-government-espana-2026-tickets-1988783899179
 WHY MATTERS: C-level cybersecurity execs from banking + government — a Niah use case is corporate event networking at exclusive executive roundtables. Free event = lower barrier to pilot.
+
+# 4 — Global Business Conference, Madrid Spain 2026
+DATE: Oct 12-14, 2026
+VENUE: Spaces Rio, 4 Calle de Manzanares, Madrid 28005
+ORGANIZER: BGM Ministries Ltd
+SIZE: Unknown (3-day general business conference)
+TARGET: Business professionals, entrepreneurs, investors
+LINK: https://www.eventbrite.co.uk/e/global-business-conference-madrid-spain-2026-tickets-1987834807420
+WHY MATTERS: Multi-day business conference in Madrid — could be a good fit for Niah's B2B networking focus. 3-day format allows deeper engagement. Verify audience size before prioritizing.
+
+# 5 — Madrid Tech Job Fair Autumn 2026
+DATE: Oct 1, 2026 (6pm-9pm)
+VENUE: Talent Garden Madrid, 15 Calle de Juan de Mariana, Madrid
+ORGANIZER: TechMeetups
+SIZE: Unknown (tech job fair)
+TARGET: Tech professionals, recruiters, startups
+LINK: https://www.eventbrite.co.uk/e/entradas-madrid-tech-job-fair-autumn-2026-feria-de-empleo-de-tecnologia-de-madrid-1988983807109
+WHY MATTERS: Tech-focused job fair with networking component. TechMeetups is a known organizer — relationship potential. Evening format = focused networking.
