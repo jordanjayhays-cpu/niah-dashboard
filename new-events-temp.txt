@@ -1,5 +1,23 @@
 # Discovered Madrid Events — NOT in Dashboard
 
+## SCAN DATE: 2026-06-29 (Hermes 007)
+## Web search: NOT AVAILABLE (402) — used Eventbrite API + HTML parsing
+## Cross-referenced against live dashboard at jordanjayhays-cpu.github.io/niah-dashboard/
+
+## ADDITIONS FROM 2026-06-29 SCAN:
+
+# 5 — Bizz Summit 2026 — NEW
+DATE: Oct 2-3, 2026 (2 days)
+VENUE: U-tad | Centro Universitario de Tecnología y Arte Digital, Calle Playa de Liencres 2 bis, Las Rozas de Madrid 28290
+ORGANIZER: Microsoft España partner ecosystem (enterprise solutions)
+SIZE: ~500-1,000 enterprise tech professionals
+TARGET: ERP managers, C-level executives, IT directors, Microsoft partners, business solution providers
+LINK: https://www.eventbrite.es/e/registro-bizz-summit-2026-1991778548255
+WHY MATTERS: "El evento internacional de referencia sobre Soluciones Empresariales de Microsoft en España" — enterprise tech crowd with strong networking needs. overlaps with ERP Summit audience but distinct (Microsoft ecosystem vs generic ERP). Great for Niah pilot targeting business tech buyers.
+STATUS: NEW — Add to dashboard
+
+---
+
 ## SCAN DATE: 2026-06-27 (Hermes 007)
 ## Web search: NOT AVAILABLE (402) — used direct HTTP + HTML parsing
 ## Cross-referenced against live dashboard at jordanjayhays-cpu.github.io/niah-dashboard/
