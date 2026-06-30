@@ -1,7 +1,7 @@
 # Discovered Madrid Events — NOT in Dashboard
 
-## SCAN DATE: 2026-06-29 (Hermes 007)
-## Web search: NOT AVAILABLE (402) — used Eventbrite API + HTML parsing
+## SCAN DATE: 2026-06-30 (Hermes 008)
+## Web search: NOT AVAILABLE (402) — no new events found, cross-referenced previous scan
 ## Cross-referenced against live dashboard at jordanjayhays-cpu.github.io/niah-dashboard/
 
 ## ADDITIONS FROM 2026-06-29 SCAN:
