@@ -1,43 +1,8 @@
 # Niah — New Madrid Events Found (July 10, 2026)
 # Source: IFEMA.es calendar + Eventbrite.es
+# Status: All events below added to dashboard (index.html) on July 10, 2026
 
-## EVENT 1 (from yesterday, July 9)
-Name: Congreso LISA 2026 — Ciberseguridad, Inteligencia y Defensa
-Date: Sept 24, 2026 | 9:30–19:30
-Venue: Asociación Pro Huérfanos de la Guardia Civil, 248 Calle del Príncipe de Vergara, 28016 Madrid
-Organizer: LISA Institute
-Expected Size: ~200-400 (limited capacity, sold out prior year)
-Audience: C-suite, CISOs, CSOs from IBEX35 companies, government/military, cybersecurity firms, defense industry
-Target sectors: Finance (IBEX35), Energy, Defense, Government
-Website: https://www.eventbrite.es/e/entradas-congreso-lisa-2026-ciberseguridad-inteligencia-y-defensa-1989008062658
-Price: €99.99
-Why it matters for Niah: High-level networking among decision-makers in finance, energy and defense. Perfect use case for AI matchmaking — people want to connect but limited time. Speakers include executives from IBEX35 companies, CNP, Guardia Civil, Ministry of Interior. Networking is explicitly a key part of the agenda.
-
-## EVENT 2 (from yesterday, July 9)
-Name: Bizz Summit 2026
-Date: Oct 2-3, 2026 | 9:00–18:30
-Venue: U-tad | Centro Universitario de Tecnología y Arte Digital, 2 bis Calle Playa de Liencres, 28290 Las Rozas de Madrid (near Madrid)
-Organizer: Bizz Summit (Microsoft Dynamics 365 / Power Platform community)
-Expected Size: ~500-1,000 (Microsoft partner ecosystem)
-Audience: Microsoft partners, Dynamics 365/ERP professionals, IT decision-makers, developers, tech community
-Target sectors: Technology, ERP, Microsoft ecosystem, IT services
-Website: https://www.eventbrite.es/e/registro-bizz-summit-2026-1991778548255
-Price: Free/donation (€1 suggested, benefits NGO)
-Why it matters for Niah: Microsoft partner ecosystem = dense B2B networking. Two-day format with sessions + workshops + networking. Community event where connections matter. Could approach via Bizz Summit organizers for a matchmaking pilot.
-
-## EVENT 3 (from yesterday, July 9)
-Name: EVOLUCIONA 2026
-Date: Sept 10, 2026
-Venue: Espacio Ronda, 50 Ronda de Segovia, 28005 Madrid
-Organizer: Unknown (appears to be AI/professional development focused)
-Expected Size: Unknown (~100-300 est.)
-Audience: Professionals interested in AI, future of work, career development
-Target sectors: AI, HR, professional development
-Website: https://www.eventbrite.es/e/entradas-evoluciona-2026-1993337535227
-Why it matters for Niah: AI + professional development networking. Single-day, focused on career progression and AI adoption. Smaller but targeted audience. Worth investigating organizer.
-
-## EVENT 4 (NEW — July 10, from IFEMA calendar)
-Name: The District Show
+## EVENT — The District Show
 Date: Sept 22-24, 2026
 Venue: IFEMA, Madrid
 Organizer: IFEMA
@@ -47,8 +12,7 @@ Target sectors: Real estate, capital markets, investment banking, private equity
 Website: https://www.ifema.es/the-district
 Why it matters for Niah: Capital markets / real estate investment networking. C-level + UHNW audience. 'Where capital takes the lead' tagline = explicit networking positioning. Wealth management + property = dense B2B decision-maker network. Could approach IFEMA for matchmaking pilot at this event.
 
-## EVENT 5 (NEW — July 10, from IFEMA calendar)
-Name: International Congress on Infectious Diseases (ICID) 2026
+## EVENT — International Congress on Infectious Diseases (ICID) 2026
 Date: Nov 10-13, 2026
 Venue: IFEMA, Madrid
 Organizer: IFEMA / Scientific society
@@ -58,13 +22,10 @@ Target sectors: Pharma, biotech, healthcare, public health
 Website: https://www.ifema.es/en/events
 Why it matters for Niah: Medical congress = high-value C-suite + KOL networking. Pharma/life sciences attendees with business development interests. Congress format includes structured networking sessions. International delegates = networking pain point is real. ESMO precedent = Niah knows medical congress audience.
 
-## EVENT 6 (NEW — July 10, from IFEMA calendar)
-Name: Fisioexpo
-Date: Sept 25-27, 2026
-Venue: IFEMA, Madrid
-Organizer: IFEMA
-Expected Size: ~2,000-5,000 est. (physiotherapy/rehabilitation trade show)
-Audience: Physiotherapists, rehabilitation professionals, sports medicine clinics, health sector SMB owners
-Target sectors: Healthcare, physiotherapy, sports medicine, rehabilitation
-Website: https://www.ifema.es/fisioexpo
-Why it matters for Niah: Healthcare B2B trade show. Clinic owners + practitioners = SMB decision-makers actively networking for business development referrals. Niah can differentiate the experience for a niche but relationship-dense audience.
+# Previously added (from July 9 research — already in dashboard):
+# - Congreso LISA 2026 — Ciberseguridad, Inteligencia y Defensa (Sept 24, 2026)
+# - Bizz Summit 2026 (Oct 2-3, 2026)
+# - EVOLUCIONA 2026 (Sept 10, 2026)
+# - FIAA 2026 — Feria Internacional del Autobús (Sept 22-24, 2026)
+# - ESS+ Powered by SICUR Colombia (Aug 26-28, 2026)
+# - Fisioexpo 2026 (Sept 25-27, 2026)
