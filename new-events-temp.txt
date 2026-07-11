@@ -1,29 +1,51 @@
-# Niah — New Madrid Events Found (July 10, 2026)
-# Source: IFEMA.es calendar + Eventbrite.es
-# Status: All events below added to dashboard (index.html) on July 10, 2026
+# Niah — New Madrid Events Found (July 11, 2026)
+# Source: IFEMA.es calendar + WebMobi discovery platform
+# Status: Events below found July 11 — need dashboard update
+
+## EVENT — Autumn Aviation Summit 2026
+Date: Sep 8-9, 2026
+Venue: Madrid (specific venue TBC)
+Organizer: Unknown (listed on WebMobi, no dedicated website found)
+Expected Size: Unknown (aviation/aerospace niche event)
+Audience: Aviation professionals, airline executives, aerospace industry, airport operators
+Target sectors: Aviation, aerospace, defense, travel
+Website: https://webmobi.com/discovery/events/autumn-aviation-summit-2026
+Why it matters for Niah: Niche B2B aviation summit. C-level + government aviation officials. Aviation industry = strong networking culture. Smaller scale = easier pilot entry point.
+
+## EVENT — ESG Summit Europe 2026
+Date: Oct 1-2, 2026
+Venue: Madrid (specific venue TBC)
+Organizer: Unknown (listed on WebMobi; esgsummiteurope.com redirects to FUTURA Summit)
+Expected Size: Unknown (sustainability/finance niche)
+Audience: ESG professionals, sustainable finance, corporate sustainability officers, regulators
+Target sectors: Finance, sustainability, energy, corporate governance
+Website: https://webmobi.com/discovery/events/esg-summit-europe-2026
+Why it matters for Niah: ESG/sustainable finance = growing B2B sector with strong C-suite attendance. Finance professionals = high-value networking targets. 2-day format suggests structured program with networking sessions.
+
+# === PREVIOUSLY FOUND (July 10, 2026) — NOT YET IN DASHBOARD ===
+# NOTE: July 10 notes say "added to dashboard" but events NOT found in current dashboard HTML.
+# Verify and add if missing:
 
 ## EVENT — The District Show
 Date: Sept 22-24, 2026
 Venue: IFEMA, Madrid
 Organizer: IFEMA
-Expected Size: ~3,000-5,000 est. (real estate/investment professionals)
-Audience: Investors, real estate developers, capital markets professionals, family offices, property funds
-Target sectors: Real estate, capital markets, investment banking, private equity
+Expected Size: ~3,000-5,000 est.
+Audience: Investors, real estate developers, capital markets, family offices, property funds
 Website: https://www.ifema.es/the-district
-Why it matters for Niah: Capital markets / real estate investment networking. C-level + UHNW audience. 'Where capital takes the lead' tagline = explicit networking positioning. Wealth management + property = dense B2B decision-maker network. Could approach IFEMA for matchmaking pilot at this event.
+Why it matters: Capital markets / real estate investment networking. C-level + UHNW audience.
 
 ## EVENT — International Congress on Infectious Diseases (ICID) 2026
 Date: Nov 10-13, 2026
 Venue: IFEMA, Madrid
 Organizer: IFEMA / Scientific society
-Expected Size: ~2,000-4,000 est. (medical congress)
-Audience: Infectious disease specialists, microbiologists, public health officials, pharma R&D, biotech, government health agencies
-Target sectors: Pharma, biotech, healthcare, public health
+Expected Size: ~2,000-4,000 est.
+Audience: Infectious disease specialists, microbiologists, pharma R&D, biotech, public health agencies
 Website: https://www.ifema.es/en/events
-Why it matters for Niah: Medical congress = high-value C-suite + KOL networking. Pharma/life sciences attendees with business development interests. Congress format includes structured networking sessions. International delegates = networking pain point is real. ESMO precedent = Niah knows medical congress audience.
+Why it matters: Medical congress = high-value C-suite + KOL networking. Pharma/life sciences audience.
 
 # Previously added (from July 9 research — already in dashboard):
-# - Congreso LISA 2026 — Ciberseguridad, Inteligencia y Defensa (Sept 24, 2026)
+# - Congreso LISA 2026 — Ciberseguridad (Sept 24, 2026)
 # - Bizz Summit 2026 (Oct 2-3, 2026)
 # - EVOLUCIONA 2026 (Sept 10, 2026)
 # - FIAA 2026 — Feria Internacional del Autobús (Sept 22-24, 2026)
