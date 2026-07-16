@@ -1,83 +1,85 @@
 # New Madrid events found - Niah dashboard update
-# Scan date: 2026-07-15
-# Sources: IFEMA calendar JSON-LD, direct event page scraping
-# Limitations: Web search API unavailable, JS-rendered content on most event sites
+# Scan date: 2026-07-16
+# Sources: IFEMA calendar JSON-LD extraction, Kenes Spain page, South Summit
+# Limitations: Web search API unavailable, direct page scraping used instead
 
 ## SCAN SUMMARY
-- Last scan: 2026-07-14 (found ICID 2026 as only new event)
-- Current scan: 2026-07-15
+- Last scan: 2026-07-15 (found 6 IFEMA events)
+- Current scan: 2026-07-16
 - New events found this scan: 6 (IFEMA calendar scan)
 - All events already in dashboard were confirmed present
+- Web search: unavailable (no provider configured)
+- Alternative: direct curl scraping of IFEMA + Kenes + South Summit
 
-## NEW EVENTS (this scan — IFEMA calendar JSON-LD extraction)
+## NEW EVENTS (this scan — IFEMA JSON-LD extraction)
 
-### 1. MOMAD — International Fashion, Footwear and Accessories Trade Show
-- Date: July 23-25, 2026
-- Venue: IFEMA MADRID
-- Organizer: IFEMA MADRID
-- Expected size: ~5,000-10,000 (fashion trade fair)
-- Website: https://www.ifema.es/en/momad
-- Target audience: Fashion brands, footwear/accessories designers, buyers, retailers, wholesalers
-- Why it matters for Niah: B2B fashion trade fair with real networking pain — brands meet buyers, distributors meet retailers. Right size for pilot. Fashion industry is relationship-driven = high need for serendipitous connections. Contact: IFEMA direct.
-- Priority: MEDIUM
-- Status: NOT in dashboard
-
-### 2. MADRIDJOYA — International Watchmaking and Jewellery Show
-- Date: September 24-27, 2026
-- Venue: IFEMA MADRID
-- Organizer: IFEMA MADRID
-- Expected size: ~3,000-5,000 (jewellery trade fair)
-- Website: https://www.ifema.es/en/madrid-joya
-- Target audience: Jewellery brands, watchmakers, wholesalers, retailers, trend buyers
-- Why it matters for Niah: Niche B2B trade fair — jewellery execs and buyers doing deals. International attendance (Spain's leading jewellery trade fair). Right size for Niah pilot. Direct IFEMA relationship = easy entry.
-- Priority: MEDIUM
-- Status: NOT in dashboard
-
-### 3. BISUTEX — International Jewellery and Accessories Fair
-- Date: September 24-27, 2026 (same week as Madridjoya — concurrent)
-- Venue: IFEMA MADRID
-- Organizer: IFEMA MADRID
-- Expected size: ~3,000-5,000 (costume jewellery + accessories)
-- Website: https://www.ifema.es/en/bisutex
-- Target audience: Costume jewellery brands, accessories wholesalers, fashion buyers
-- Why it matters for Niah: Overlaps with Madridjoya week — opportunity to approach both fairs or pitch combined. Smaller players than Madridjoya. Could be a good testing ground for Niah with smaller exhibitor booths.
-- Priority: LOW-MEDIUM
-- Status: NOT in dashboard
-
-### 4. GUEXT — International Hospitality Suppliers and Services Trade Show
+### 1. GUEXT 2026 — HIGH PRIORITY
 - Date: October 15-17, 2026
 - Venue: IFEMA MADRID
 - Organizer: IFEMA MADRID
-- Expected size: 7,000 professionals, 46 countries (confirmed in event description)
+- Expected size: 7,000 professionals, 46 countries
 - Website: https://www.ifema.es/guext
 - Target audience: Hospitality brands, hotel suppliers, restaurant outfitters, tourism industry
-- Why it matters for Niah: Strong B2B networking event — hospitality professionals sourcing suppliers. 7K attendees is in Niah's sweet spot. "Hospitality líder en España." Direct B2B deal-making = good matchmaking use case.
-- Priority: MEDIUM-HIGH
+- Why it matters for Niah: TOP PRIORITY. Hospitality B2B matchmaking — 7K attendees doing deals. Clear networking pain. Niah sweet spot.
+- Priority: HIGH
 - Status: NOT in dashboard
 
-### 5. MBFWM — Mercedes Benz Fashion Week Madrid
-- Date: September 14-19, 2026
+### 2. MOMAD 2026 — MEDIUM PRIORITY
+- Date: July 23-25, 2026
 - Venue: IFEMA MADRID
 - Organizer: IFEMA MADRID
-- Expected size: ~10,000+ (fashion week)
-- Website: https://www.ifema.es/mbfw-madrid
-- Target audience: Fashion designers, brands, press/media, buyers
-- Why it matters for Niah: Lower priority — MBFWM is more press/consumer-facing than trade-focused. Less pure B2B than Momad. Skippable for Niah unless IFEMA relationship angle is compelling.
-- Priority: LOW
+- Expected size: ~5,000-10,000
+- Website: https://www.ifema.es/en/momad
+- Target audience: Fashion brands, footwear/accessories designers, buyers, retailers
+- Why it matters for Niah: Fashion trade fair — relationship-driven networking. Right size for pilot. Contact IFEMA direct.
+- Priority: MEDIUM
 - Status: NOT in dashboard
 
-### 6. ESTAMPA — Contemporary Art Fair
+### 3. MADRIDJOYA Sep 2026 — MEDIUM PRIORITY
 - Date: September 24-27, 2026
 - Venue: IFEMA MADRID
 - Organizer: IFEMA MADRID
-- Expected size: ~5,000 (art fair)
-- Website: https://www.ifema.es/estampa
-- Target audience: Art galleries, collectors, artists, cultural institutions
-- Why it matters for Niah: Lower priority — art galleries and collectors networking. Different vertical from typical B2B conferences. Art fair networking is more consumer/gallery focused. Skippable for Niah's core use case.
+- Expected size: ~3,000-5,000
+- Website: https://www.ifema.es/en/madrid-joya
+- Target audience: Jewellery brands, watchmakers, wholesalers, retailers
+- Why it matters for Niah: Spain's leading jewellery B2B trade fair. International attendance. Direct IFEMA relationship = easy entry.
+- Priority: MEDIUM
+- Status: NOT in dashboard
+
+### 4. BISUTEX Sep 2026 — LOW-MEDIUM PRIORITY
+- Date: September 24-27, 2026 (concurrent with Madridjoya)
+- Venue: IFEMA MADRID
+- Organizer: IFEMA MADRID
+- Expected size: ~3,000-5,000
+- Website: https://www.ifema.es/en/bisutex
+- Target audience: Costume jewellery brands, accessories wholesalers, fashion buyers
+- Why it matters for Niah: Concurrent with Madridjoya — opportunity to pitch combined. Smaller exhibitors = more approachable.
+- Priority: LOW-MEDIUM
+- Status: NOT in dashboard
+
+### 5. MBFWM Sep 2026 — LOW PRIORITY
+- Date: September 14-19, 2026
+- Venue: IFEMA MADRID
+- Organizer: IFEMA MADRID
+- Expected size: ~10,000+
+- Website: https://www.ifema.es/mbfw-madrid
+- Target audience: Fashion designers, brands, press/media, buyers
+- Why it matters for Niah: More press/consumer-facing than trade-focused. Less pure B2B. Skippable unless IFEMA relationship compelling.
 - Priority: LOW
 - Status: NOT in dashboard
 
-## EVENTS ALREADY IN DASHBOARD (confirmed)
+### 6. ESTAMPA 2026 — LOW PRIORITY
+- Date: September 24-27, 2026
+- Venue: IFEMA MADRID
+- Organizer: IFEMA MADRID
+- Expected size: ~5,000
+- Website: https://www.ifema.es/estampa
+- Target audience: Art galleries, collectors, artists, cultural institutions
+- Why it matters for Niah: Art fair — different vertical. Less relevant for Niah B2B matchmaking use case.
+- Priority: LOW
+- Status: NOT in dashboard
+
+## EVENTS ALREADY IN DASHBOARD (confirmed present)
 - South Summit Madrid: June 3-5, 2026 | La Nave
 - ERP Summit Spain: June 9, 2026 | Casa de Campo Convention Center
 - Cybersecurity Bank & Government España: June 16, 2026 | MEETING PLACE Orense 34
@@ -99,18 +101,14 @@
 - Logistics & Automation Madrid: Nov 11-12, 2026 | IFEMA Halls 2+4
 - SIMO Educación: Nov 11-13, 2026 | IFEMA
 - GENERA: Nov 24-26, 2026 | IFEMA
-- ICID 2026: Nov 10-13, 2026 | Madrid (verify venue via Kenes)
+- ICID 2026: Nov 10-13, 2026 | Madrid
 
-## PRIORITY RECOMMENDATION
-Top 3 to add to dashboard:
-1. GUEXT (Oct 15-17) — 7K attendees, clear B2B hospitality matchmaking
-2. MOMAD (July 23-25) — fashion trade fair, right size, relationship-driven networking
-3. MADRIDJOYA (Sept 24-27) — jewellery B2B, niche but right audience
-
-MBFWM and ESTAMPA are lower priority for Niah's B2B matchmaking angle.
+## RECOMMENDED ACTIONS
+1. GUEXT (Oct 15-17) — Contact IFEMA BD team NOW. Best B2B fit for Niah pilot.
+2. MOMAD (Jul 23-25) — IFEMA relationship path. Last-minute possible if contacts exist.
+3. MADRIDJOYA (Sept 24-27) — Secondary. Right audience but niche.
 
 ## SCANNING LIMITATIONS
-- Web search API not available — used IFEMA calendar JSON-LD extraction
-- Dashboard scan performed via HTML parsing
-- Kenes Group and other organizers not re-checked this scan
-- Some events (Blackworks, Madhorror) filtered out as non-B2B
+- Web search API not available — used IFEMA JSON-LD + direct page scraping
+- Kenes Spain events: None confirmed in Madrid beyond existing dashboard entries
+- South Summit: No new events beyond 2026 Madrid found
