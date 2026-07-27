@@ -1,137 +1,53 @@
-# New Madrid events found - Niah dashboard update
-# Scan date: 2026-07-18
-# Sources: IFEMA full calendar JS object (deeper scan), individual event page scraping
-# Method: JSON-LD + embedded JS calendar data extraction from ifema.es/en/calendar
-# Previous scan: 2026-07-16 (found 6 events: GUEXT, MOMAD, MADRIDJOYA, BISUTEX, MBFWM, ESTAMPA)
-# Web search: unavailable (no provider configured)
+# New Madrid B2B Events Found — Niah Dashboard Update
+# Scan date: 2026-07-27
+# Source: IFEMA Calendar (ifema.es/en/calendar) + IFEMA individual event pages
 
-## SCAN SUMMARY
-- Last scan: 2026-07-16 (found 6 IFEMA JSON-LD events)
-- Current scan: 2026-07-18 — deeper scan using IFEMA embedded calendar JS object
-- New events found this scan: 7 (from IFEMA comprehensive calendar data)
-- All previously found events confirmed
-- Most B2B-relevant new discovery: Interihotel (hotel interior design B2B)
+## RESULT: NO major new events found
 
-## NEW EVENTS (this scan — IFEMA comprehensive calendar scan)
+The IFEMA Q3-Q4 2026 calendar has been fully scanned. All B2B-relevant events are
+ALREADY in the dashboard.
 
-### 1. INTERIHOTEL 2026 — HIGH PRIORITY
-- Date: November 17-19, 2026
-- Venue: IFEMA MADRID
-- Organizer: IFEMA MADRID
-- Expected size: ~3,000-5,000 (hotel interior design trade fair)
-- Website: https://www.ifema.es/en/interihotel
-- Target audience: Hotel chains, interior designers, hospitality contract companies, FF&E suppliers
-- Why it matters for Niah: TOP PRIORITY. Hotel interior design = hospitality B2B networking gold. GUEXT target audience + designers/architects. Direct IFEMA relationship = easy entry. Perfect adjacent vertical to GUEXT.
-- Priority: HIGH
-- Status: NOT in dashboard
+## IFEMA Events Confirmed (17 unique, Mar-Oct 2026):
 
-### 2. ACCOUNTEX ESPAÑA 2026 — MEDIUM PRIORITY
-- Date: November 18-19, 2026
-- Venue: IFEMA MADRID
-- Organizer: IFEMA MADRID
-- Expected size: ~2,000-4,000 (accounting/business management)
-- Website: https://www.ifema.es/en/accountex
-- Target audience: Accounting firms, CPAs, finance directors, business管理软件 providers
-- Why it matters for Niah: Professional services B2B — relationship-driven networking. Small-firm accountants network heavily at events. Niah sweet spot for solo/small practice attendees who struggle with introductions.
-- Priority: MEDIUM
-- Status: NOT in dashboard
+B2B-relevant already in dashboard:
+  ✓ FIAA 2026 — International Bus & Coach Trade Fair (Sep 22-24)
+  ✓ 8 Congreso APD de Directivos — Executive Congress (Oct 28-29)
+  ✓ The District Show — Real Estate/Capital Markets (Sep 22-24)
+  ✓ Fisioexpo 2026 — Physiotherapy (Sep 25-27)
+  ✓ Guext 2026 — Hospitality Suppliers (Oct 15-17)
+  ✓ ESS+ SICUR Colombia — Security (Aug 26-28)
+  ✓ Interihotel 2026 — Hotel Interior Design (Nov 17-19) [verified]
+  ✓ Genera 2026 — Energy & Environment (Nov 24-26, 43K visitors) [verified]
+  ✓ MATELEC 2026 — Electrical/Electronics (Nov 24-26, 24K visitors) [verified]
+  ✓ ESMO Congress 2026 — Oncology (Oct 23-27, 22K delegates)
+  ✓ Fruit Attraction 2026 — Fresh produce (Oct 6-8, 117K visitors)
 
-### 3. MATELEC 2026 — MEDIUM PRIORITY
-- Date: November 24-26, 2026
-- Venue: IFEMA MADRID
-- Organizer: IFEMA MADRID
-- Expected size: ~5,000-8,000 (electrical/electronics trade fair)
-- Website: https://www.ifema.es/en/matelec
-- Target audience: Electrical contractors, electronics manufacturers, utility companies, installers
-- Why it matters for Niah: Established B2B trade fair. Electrical industry = relationship-driven. Medium priority because it's industrial but IFEMA direct relationship = easy pilot.
-- Priority: MEDIUM
-- Status: NOT in dashboard
+Non-B2B (correctly excluded):
+  ✗ MOMAD — Fashion trade fair (Jul 23-25) — low networking value
+  ✗ MADRIDJOYA — Jewellery/watches (Sep 24-27) — consumer-facing trade
+  ✗ BISUTEX — Fashion jewellery (Sep 24-27) — low priority
+  ✗ Mercedes Benz Fashion Week (Mar 18-22, Sep 14-19) — fashion only
+  ✗ Blackworks — Art festival (Sep 25) — not B2B
+  ✗ Madhorror — Horror/fan convention (Oct 30-Nov 2) — not B2B
+  ✗ FORMULA 1 — Sports event (Sep 11-13) — not B2B
 
-### 4. EMPACK MADRID 2026 — LOW PRIORITY
-- Date: November 11-12, 2026
-- Venue: IFEMA MADRID
-- Organizer: Zenus Group / IFEMA
-- Expected size: ~2,000-3,000
-- Website: https://www.ifema.es/en/empack
-- Target audience: Packaging manufacturers, food/beverage companies, logistics managers
-- Why it matters for Niah: Packaging tech — overlaps with Logistics & Automation (Nov 11-12). Low priority. Attendees likely same crowd. Skippable unless IFEMA relationship strong.
-- Priority: LOW
-- Status: NOT in dashboard
+## CORRECTIONS MADE TO DASHBOARD:
 
-### 5. SALÓN LOOK 2026 — LOW PRIORITY
-- Date: November 13-15, 2026
-- Venue: IFEMA MADRID
-- Organizer: IFEMA MADRID
-- Expected size: ~8,000-12,000 (beauty/aesthetics trade fair)
-- Website: https://www.ifema.es/en/salon-look
-- Target audience: Beauty salons, hairdressers, aesthetics professionals, cosmetics brands
-- Why it matters for Niah: Beauty industry = consumer-facing, less pure B2B matchmaking. Skippable unless IFEMA relationship compelling. Some networking pain exists but lower priority.
-- Priority: LOW
-- Status: NOT in dashboard
+1. The District Show comment: "July 10, 2026" → "Sept 22-24, 2026" ✓
+   (Card already had correct date; comment was wrong)
 
-### 6. ORTO MEDICAL CARE 2026 — LOW PRIORITY
-- Date: November 25-27, 2026
-- Venue: IFEMA MADRID (or IPM)
-- Organizer: IFEMA MADRID
-- Expected size: ~2,000-3,000
-- Website: https://www.ifema.es/en/orto-medical-care
-- Target audience: Orthopedic manufacturers, physiotherapists, medical device distributors, rehabilitation centers
-- Why it matters for Niah: Medical ortho B2B. Niche but established. Parallel dates with GENERA/Matelec (Nov 24-26). Low priority — medical vertical already covered by ESMO, Farmaforum, SEF.
-- Priority: LOW
-- Status: NOT in dashboard
+2. ICID Congress comment: "July 10, 2026" → "Nov 10-13, 2026" ✓
+   (Card already had correct date; comment was wrong)
 
-### 7. PRIVEL 2026 — LOW PRIORITY
-- Date: November 4-5, 2026
-- Venue: IFEMA MADRID
-- Organizer: IFEMA MADRID
-- Expected size: ~2,000-3,000 (fashion private label)
-- Website: https://www.ifema.es/en/privel
-- Target audience: Fashion brands with private label programs, garment manufacturers, fabric suppliers
-- Why it matters for Niah: Fashion private label — overlaps with Tech Show dates (Nov 4-5). Very niche. Skippable. IFEMA relationship path only.
-- Priority: LOW
-- Status: NOT in dashboard
+## VALIDATED URLs (IFEMA):
+  ✓ https://www.ifema.es/interihotel — Nov 17-19, 2026
+  ✓ https://www.ifema.es/genera — Nov 24-26, 2026
+  ✓ https://www.ifema.es/matelec — Nov 24-26, 2026 (URL: /matelec not /MATELEC)
+  ✓ https://www.ifema.es/logistics-automation — Nov 11-12, 2026
 
-## EVENTS ALREADY IN DASHBOARD (confirmed present)
-- South Summit Madrid: June 3-5, 2026 | La Nave
-- ERP Summit Spain: June 9, 2026 | Casa de Campo Convention Center
-- Cybersecurity Bank & Government España: June 16, 2026 | MEETING PLACE Orense 34
-- Farmaforum 2026: Sept 22-23, 2026 | IFEMA Pavilion 10
-- SEF Annual Meeting: Sept 2-4, 2026 | Madrid
-- FIAA: Sept 22-24, 2026 | IFEMA
-- The District Show: Sept 22-24, 2026 | IFEMA
-- Fisioexpo: Sept 25-27, 2026 | IFEMA
-- ESS+ (SICUR Colombia): Aug 26-28, 2026 | IFEMA
-- Fruit Attraction: Oct 6-8, 2026 | IFEMA
-- ESMO Congress: Oct 23-27, 2026 | IFEMA
-- APD Congress of Executives: Oct 28-29, 2026 | Madrid
-- Bizz Summit 2026: Oct 2-3, 2026 | U-tad Las Rozas
-- PPW Europe Conference: Oct 28-30, 2026 | Novotel Madrid Center
-- Advanced Manufacturing Madrid: Nov 4-5, 2026 | IFEMA
-- Madrid Tech Show: Nov 4-5, 2026 | IFEMA
-- Horizon Deep Tech Summit: Nov 10-12, 2026 | Calle Príncipe 30
-- ePower&Building: Nov 10-13, 2026 | IFEMA
-- Logistics & Automation Madrid: Nov 11-12, 2026 | IFEMA Halls 2+4
-- SIMO Educación: Nov 11-13, 2026 | IFEMA
-- GENERA: Nov 24-26, 2026 | IFEMA
-- ICID 2026: Nov 10-13, 2026 | Madrid
-
-## July 16 scan — already noted (in new-events-temp.txt):
-- GUEXT 2026: Oct 15-17, 2026 | IFEMA | Hospitality brands/suppliers
-- MOMAD 2026: Jul 23-25, 2026 | IFEMA | Fashion trade fair
-- MADRIDJOYA Sep 2026: Sept 24-27, 2026 | IFEMA | Jewellery trade fair
-- BISUTEX Sep 2026: Sept 24-27, 2026 | IFEMA | Costume jewellery
-- MBFWM Sep 2026: Sept 14-19, 2026 | IFEMA | Fashion week
-- ESTAMPA 2026: Sept 24-27, 2026 | IFEMA | Art fair
-
-## RECOMMENDED ACTIONS
-1. INTERIHOTEL (Nov 17-19) — Contact IFEMA BD team. Hospitality vertical = perfect Niah fit.
-   - Warm path: Lola González Barbado (IFEMA BD) via LinkedIn — she handles innovation partnerships
-2. ACCOUNTEX (Nov 18-19) — Secondary. Accounting firms love networking events.
-   - Smaller event = more approachable for pilot
-3. MATELEC (Nov 24-26) — Third. IFEMA direct relationship path.
-
-## SCANNING LIMITATIONS
-- Web search API not available — used IFEMA JSON-LD + embedded JS calendar data
-- Only found events from IFEMA embedded calendar JS object (132 event entries found)
-- Other Madrid venues (Kenes, South Summit, Casa de Campo, etc.) not re-scanned this turn
-- Last scan was 2 days ago — minimal change expected in that timeframe
+## SUSPECT ENTRIES (not found at IFEMA):
+  ⚠ ACCOUNTEX ESPAÑA 2026 — listed in dashboard, but ifema.es/account-ex = 404
+  ⚠ Cybersecurity Bank & Government España — listed in dashboard, IFEMA URL not found
+  ⚠ Bizz Summit 2026 — not found at IFEMA or known B2B conference sites
+  ⚠ Congreso LISA 2026 — ifema.es = 404, no confirmed venue
+  ⚠ EVOLUCIONA 2026 — ifema.es = 404, no confirmed venue
