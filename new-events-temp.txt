@@ -1,53 +1,34 @@
-# New Madrid B2B Events Found — Niah Dashboard Update
-# Scan date: 2026-07-27
-# Source: IFEMA Calendar (ifema.es/en/calendar) + IFEMA individual event pages
+# New Madrid B2B Events — Discovered by Hermes · July 31, 2026
 
-## RESULT: NO major new events found
+## 1. #TRG26
+- Date: Oct 22-24, 2026 (3 days)
+- Venue: La Nave, Madrid
+- Organizer: TRG
+- Est. size: ~200-500 tech professionals
+- Price: €302.50
+- Link: https://www.eventbrite.es/e/entradas-trg26-1985907372410
+- Description: Tech/software/innovation networking event — "Un punto de encuentro para gente que hace cosas alrededor del software, la innovación tecnológica, los negocios digitales e Internet."
+- Niah fit: HIGH — 3-day format at La Nave (same venue as South Summit), strong networking focus, tech early-adopter crowd
+- Target: Tech founders, developers, digital business professionals
 
-The IFEMA Q3-Q4 2026 calendar has been fully scanned. All B2B-relevant events are
-ALREADY in the dashboard.
+## 2. SEO Vibes Madrid 2026 (#CerveSEO)
+- Date: Sep 24, 2026 (17:30–22:00)
+- Venue: Impact Hub Alameda — Coworking Madrid Centro
+- Organizer: WhitePress®
+- Est. size: ~80-150
+- Price: €16.54
+- Link: https://www.eventbrite.com/e/seo-vibes-madrid-2026-conferencia-seo-cerveseo-1993138176941
+- Description: Beer + SEO learning + networking. Professionals learning SEO over craft beer.
+- Niah fit: MEDIUM — niche B2B, casual format suits matchmaking, digital marketing professionals
+- Target: Digital marketers, SEO specialists, content professionals
 
-## IFEMA Events Confirmed (17 unique, Mar-Oct 2026):
-
-B2B-relevant already in dashboard:
-  ✓ FIAA 2026 — International Bus & Coach Trade Fair (Sep 22-24)
-  ✓ 8 Congreso APD de Directivos — Executive Congress (Oct 28-29)
-  ✓ The District Show — Real Estate/Capital Markets (Sep 22-24)
-  ✓ Fisioexpo 2026 — Physiotherapy (Sep 25-27)
-  ✓ Guext 2026 — Hospitality Suppliers (Oct 15-17)
-  ✓ ESS+ SICUR Colombia — Security (Aug 26-28)
-  ✓ Interihotel 2026 — Hotel Interior Design (Nov 17-19) [verified]
-  ✓ Genera 2026 — Energy & Environment (Nov 24-26, 43K visitors) [verified]
-  ✓ MATELEC 2026 — Electrical/Electronics (Nov 24-26, 24K visitors) [verified]
-  ✓ ESMO Congress 2026 — Oncology (Oct 23-27, 22K delegates)
-  ✓ Fruit Attraction 2026 — Fresh produce (Oct 6-8, 117K visitors)
-
-Non-B2B (correctly excluded):
-  ✗ MOMAD — Fashion trade fair (Jul 23-25) — low networking value
-  ✗ MADRIDJOYA — Jewellery/watches (Sep 24-27) — consumer-facing trade
-  ✗ BISUTEX — Fashion jewellery (Sep 24-27) — low priority
-  ✗ Mercedes Benz Fashion Week (Mar 18-22, Sep 14-19) — fashion only
-  ✗ Blackworks — Art festival (Sep 25) — not B2B
-  ✗ Madhorror — Horror/fan convention (Oct 30-Nov 2) — not B2B
-  ✗ FORMULA 1 — Sports event (Sep 11-13) — not B2B
-
-## CORRECTIONS MADE TO DASHBOARD:
-
-1. The District Show comment: "July 10, 2026" → "Sept 22-24, 2026" ✓
-   (Card already had correct date; comment was wrong)
-
-2. ICID Congress comment: "July 10, 2026" → "Nov 10-13, 2026" ✓
-   (Card already had correct date; comment was wrong)
-
-## VALIDATED URLs (IFEMA):
-  ✓ https://www.ifema.es/interihotel — Nov 17-19, 2026
-  ✓ https://www.ifema.es/genera — Nov 24-26, 2026
-  ✓ https://www.ifema.es/matelec — Nov 24-26, 2026 (URL: /matelec not /MATELEC)
-  ✓ https://www.ifema.es/logistics-automation — Nov 11-12, 2026
-
-## SUSPECT ENTRIES (not found at IFEMA):
-  ⚠ ACCOUNTEX ESPAÑA 2026 — listed in dashboard, but ifema.es/account-ex = 404
-  ⚠ Cybersecurity Bank & Government España — listed in dashboard, IFEMA URL not found
-  ⚠ Bizz Summit 2026 — not found at IFEMA or known B2B conference sites
-  ⚠ Congreso LISA 2026 — ifema.es = 404, no confirmed venue
-  ⚠ EVOLUCIONA 2026 — ifema.es = 404, no confirmed venue
+## 3. Global Business Conference, Madrid Spain 2026
+- Date: Nov 12, 2026 (10:00–12:00, 2 hours)
+- Venue: Spaces Rio, 4 Calle de Manzanares, 28005 Madrid
+- Organizer: TBC (via Eventbrite)
+- Est. size: ~50-100
+- Price: $33.51
+- Link: https://www.eventbrite.com/e/global-business-conference-madrid-spain-2026-tickets-1996049783635
+- Description: General B2B networking conference. English-language, international audience.
+- Niah fit: LOW-MEDIUM — short 2hr format limits matchmaking value, but B2B professional audience
+- Target: General business professionals, entrepreneurs
