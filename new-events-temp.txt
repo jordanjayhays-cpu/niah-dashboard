@@ -1,4 +1,4 @@
-# New Madrid B2B Events — Discovered by Hermes · July 31, 2026
+# New Madrid B2B Events — Discovered by Hermes · August 6, 2026
 
 ## 1. #TRG26
 - Date: Oct 22-24, 2026 (3 days)
@@ -32,3 +32,36 @@
 - Description: General B2B networking conference. English-language, international audience.
 - Niah fit: LOW-MEDIUM — short 2hr format limits matchmaking value, but B2B professional audience
 - Target: General business professionals, entrepreneurs
+
+## 4. ICPHAMS 2026 — 3rd International Conference on Public Health and Medical Science (NEW)
+- Date: Dec 19-20, 2026 (2 days)
+- Venue: Hotel NH Madrid Nacional, Paseo del Prado 48, 28014 Madrid
+- Organizer: ISERD
+- Est. size: ~100-300 (medical/academic conference)
+- Price: €268-407 (USD)
+- Link: https://www.eventbrite.com/e/3rd-international-conference-on-public-health-and-medical-science-icphams-tickets-1992684136895
+- Description: International medical science and public health conference. Global experts exploring innovations in healthcare.
+- Niah fit: HIGH — medical/healthcare professionals are high-value B2B networking targets; academic-conference format = strong match for Niah's matchmaking
+- Target: Healthcare professionals, medical researchers, public health officials, pharma/biotech
+
+## 5. Madrid 2027 Venture Capital World Summit (NEW)
+- Date: April 27, 2027 (13:00–17:00)
+- Venue: Regus - Torre de Cristal, Paseo de la Castellana 259C, 18th Floor, 28046 Madrid
+- Organizer: Venture Capital World Summit OU
+- Est. size: ~50-200 (investor/startup ecosystem)
+- Price: €169-57,662
+- Link: https://www.eventbrite.com/e/madrid-2027-venture-capital-world-summit-tickets-1989175716114
+- Description: Part of a World Series of investment conferences. Connects investors with startups/businesses seeking capital.
+- Niah fit: MEDIUM-HIGH — VC/investor events are prime B2B matchmaking territory; 4-hour format allows networking time
+- Target: Investors, fund managers, startup founders, business owners seeking funding
+
+## 6. Mujeres de Europa — Annual Conference 2026 (NEW)
+- Date: Oct 16-18, 2026 (3 days)
+- Venue: La Gran Villa, Madrid
+- Organizer: TBC (via Eventbrite)
+- Est. size: ~100-300 (women's leadership/gender diversity event)
+- Price: €300-333
+- Link: https://www.eventbrite.com/e/entradas-mujeres-de-europa-1982949631728
+- Description: Women's leadership and empowerment annual conference. Spanish-language event focused on women in business.
+- Niah fit: MEDIUM — women's professional events are growing B2B segment; 3-day format with strong networking component; Niah can position as inclusive matchmaking
+- Target: Women business leaders, entrepreneurs, policymakers, diversity & inclusion professionals
