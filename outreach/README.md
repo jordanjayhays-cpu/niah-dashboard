@@ -29,8 +29,9 @@ Safety gates, identical to Placewell:
 
 ## Seed data
 
-`niah-prospects-import.json` — 490 unique prospects merged from
-`leads-niah-500.csv` + `niah-outreach-sprint.csv`:
+490 unique prospects merged from `leads-niah-500.csv` +
+`niah-outreach-sprint.csv` (both on `main`), imported server-side into
+`niah_prospects` on 2026-08-10:
 - 11 `ready_to_send` (Jordan's hand-written sprint scripts, email on file)
 - 25 `researched` (named decision-maker + email/LinkedIn, awaiting drafts)
 - 454 `new` (mostly generic org inboxes; need a named contact first)
