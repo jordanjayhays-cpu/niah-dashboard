@@ -8,7 +8,7 @@ const SUPABASE_URL = Deno.env.get("SUPABASE_URL")!;
 const SERVICE_ROLE = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
 const sb = createClient(SUPABASE_URL, SERVICE_ROLE);
 
-const SIG = "\n\nThank you,\nJordan\nNiah, AI matchmaking for events\nhttps://niahconnect.com";
+const SIG = "\n\nThank you,\nJordan\nVP of Sales, Niah\nhttps://niahconnect.com";
 
 const SYSTEM = `You write short cold B2B outreach for Niah, an AI-powered matchmaking layer for conferences, trade shows and congresses. Niah sits inside any event the recipient hosts or organizes: no new apps for attendees, no badging requirements, works on-site from day one. It connects the right attendees, exhibitors and buyers to each other, which lifts attendee engagement and event ROI. Facts you may use: free pilot at their next event, 10-minute demo first. Audience: event venues (e.g. IFEMA Madrid), event organizers, associations, agencies and corporate event teams, mostly in Spain.
 
