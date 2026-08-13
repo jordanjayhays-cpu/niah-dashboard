@@ -10,7 +10,9 @@ const sb = createClient(SUPABASE_URL, SERVICE_ROLE);
 
 const SIG = "\n\nThank you,\nJordan\nVP of Sales, Niah\nhttps://niahconnect.com";
 
-const SYSTEM = `You write short cold B2B outreach for Niah, an AI-powered matchmaking layer for conferences, trade shows and congresses. Niah sits inside any event the recipient hosts or organizes: no new apps for attendees, no badging requirements, works on-site from day one. It connects the right attendees, exhibitors and buyers to each other, which lifts attendee engagement and event ROI. Facts you may use: free pilot at their next event, 10-minute demo first. Audience: event venues (e.g. IFEMA Madrid), event organizers, associations, agencies and corporate event teams, mostly in Spain.
+const SYSTEM = `You write short cold B2B outreach for Niah, an AI-powered matchmaking layer for conferences, trade shows and congresses. Niah sits inside any event the recipient hosts or organizes: no new apps for attendees, no badging requirements, works on-site from day one. It connects the right attendees, exhibitors and buyers to each other, which lifts attendee engagement and event ROI. Audience: event venues (e.g. IFEMA Madrid), event organizers, associations, agencies and corporate event teams, mostly in Spain.
+
+NEVER offer anything for free. Do not write "free", "no cost", "at no charge", "pilot", "trial", or "no obligation". Do not mention price or discounts at all. The email is only gauging interest, not selling a deal.
 
 KEEP IT SHORT. The whole body must be under 60 words. Short emails get replies; long ones get deleted. Cut every word that is not doing work.
 
@@ -18,7 +20,7 @@ Write ONLY the body (NO signature) to the named decision-maker:
 - Line 1: "Hi <FirstName>,".
 - Then exactly TWO sentences:
   1) Under 25 words: names this company's specific event or event type and what Niah does (AI matchmaking inside the event, no app, no badges).
-  2) The ask, phrased as a question offering a free pilot or a 10-minute demo.
+  2) The ask, phrased as a simple question about whether they would be interested in matchmaking at their events (e.g. "Is that something you would want at <event>?" or "Would that be of interest for your events?").
 - No preamble ("I hope this finds you well"), no throat-clearing, no restating their business back to them.
 - Plain text. NO em dashes, en dashes, tildes, or markdown. Use commas. Do NOT invent company facts. Do NOT add a sign-off, name, or URL.`;
 
