@@ -24,7 +24,7 @@ const SUBJECTS = [
   (c: string) => `${c} + Niah`,
   (c: string) => `AI matchmaking at ${c} events`,
   (c: string) => `Networking idea for ${c}`,
-  (c: string) => `${c}: a free pilot idea`,
+  (c: string) => `Matchmaking at ${c} events?`,
   (c: string) => `${c}, worth 10 minutes?`,
 ];
 function subjectFor(company: string): string {
@@ -80,15 +80,40 @@ Deno.serve(async (req: Request) => {
     const onlyVerified = body.only_verified !== false;
     const dryRun = body.dry_run === true;
 
+    // release_from: promote a parked status (e.g. "ready_monday") to ready_to_send in the
+    // same authenticated call. Lets a scheduled run fire without any database tooling.
+    let released = 0;
+    if (typeof body.release_from === "string" && body.release_from.trim()) {
+      const fromStatus = body.release_from.trim();
+      if (fromStatus === "sent") return new Response(JSON.stringify({ ok: false, error: "refusing to re-release 'sent'" }), { headers: { "Content-Type": "application/json" } });
+      // COUNT FIRST, then release. Releasing before the check would leave rows sitting
+      // live in the send queue even when the guard aborts the run.
+      const { count: parked, error: cntErr } = await sb.from("niah_prospects")
+        .select("id", { count: "exact", head: true }).eq("status", fromStatus);
+      if (cntErr) return new Response(JSON.stringify({ ok: false, error: `release precount failed: ${cntErr.message}` }), { headers: { "Content-Type": "application/json" } });
+      if (body.expect_released != null && (parked ?? 0) !== Number(body.expect_released)) {
+        return new Response(JSON.stringify({ ok: false, aborted: true, found: parked ?? 0, expected: body.expect_released, note: "parked count did not match expected; nothing was released or sent" }), { headers: { "Content-Type": "application/json" } });
+      }
+      if (dryRun) {
+        // A preview must never mutate: report what WOULD be released and leave it parked.
+        return new Response(JSON.stringify({ ok: true, dry_run: true, would_release: parked ?? 0, from_status: fromStatus, note: "dry run: nothing released, nothing sent" }), { headers: { "Content-Type": "application/json" } });
+      }
+      const { data: rel, error: relErr } = await sb.from("niah_prospects")
+        .update({ status: "ready_to_send", updated_at: new Date().toISOString() })
+        .eq("status", fromStatus).select("id");
+      if (relErr) return new Response(JSON.stringify({ ok: false, error: `release failed: ${relErr.message}` }), { headers: { "Content-Type": "application/json" } });
+      released = rel?.length ?? 0;
+    }
+
     let q = sb.from("niah_prospects").select("id,company,decision_maker,email,email_status,outreach_message")
       .eq("status", "ready_to_send").not("email", "is", null).not("outreach_message", "is", null)
       .order("tier", { ascending: true }).limit(limit);
     if (onlyVerified) q = q.eq("email_status", "verified");
     const { data: rows, error } = await q;
     if (error) return new Response(JSON.stringify({ ok: false, error: error.message }), { status: 200 });
-    if (!rows || rows.length === 0) return new Response(JSON.stringify({ ok: true, selected: 0, note: "No matching ready_to_send prospects." }), { headers: { "Content-Type": "application/json" } });
+    if (!rows || rows.length === 0) return new Response(JSON.stringify({ ok: true, released, selected: 0, note: "No matching ready_to_send prospects." }), { headers: { "Content-Type": "application/json" } });
 
-    if (dryRun) return new Response(JSON.stringify({ ok: true, dry_run: true, would_send: rows.map((r: any) => ({ company: r.company, to: r.email, subject: subjectFor(r.company) })) }), { headers: { "Content-Type": "application/json" } });
+    if (dryRun) return new Response(JSON.stringify({ ok: true, dry_run: true, released, would_send: rows.map((r: any) => ({ company: r.company, to: r.email, subject: subjectFor(r.company) })) }), { headers: { "Content-Type": "application/json" } });
 
     const client = new SMTPClient({ connection: { hostname: host, port, tls: port === 465, auth: { username: user, password: pass } } });
     const results: any[] = [];
@@ -105,7 +130,7 @@ Deno.serve(async (req: Request) => {
     }
     try { await client.close(); } catch (_) {}
     const sent = results.filter((r) => r.sent).length;
-    return new Response(JSON.stringify({ ok: true, sent, attempted: results.length, results }), { headers: { "Content-Type": "application/json" } });
+    return new Response(JSON.stringify({ ok: true, released, sent, attempted: results.length, results }), { headers: { "Content-Type": "application/json" } });
   } catch (e: any) {
     return new Response("error: " + (e?.message || String(e)), { status: 200 });
   }
