@@ -42,6 +42,30 @@ on gpt-4o-mini, not in a Claude session.
   bulk generation. `pisco-writer` is the working example — it drafted ~60 emails for cents.
 - **Claude (here):** diagnosis, architecture, judgement calls, anything where being wrong is costly.
 
+### The rule: never load bulk rows into context
+
+**If a task means reading more than ~20 rows, delegate it to `agent-worker` instead of SELECTing
+them.** The worker runs the query server-side, thinks on gpt-4o-mini, and returns a short answer —
+Claude never sees the raw data. One measured call scanned 346 prospect rows and returned ~800 tokens
+of answer; loading those rows directly would have cost roughly 40x that.
+
+```bash
+# ask — analyse rows, get a short answer back
+curl -s -X POST https://dprdnrgjkzgfgtcsguuq.supabase.co/functions/v1/agent-worker \
+  -H "Content-Type: application/json" -H "x-cron-key: $CRON_KEY" -d @job.json
+# job.json: {"mode":"ask","query":"select ... from ...","instruction":"..."}
+
+# fill — generate text per row and write it to a column
+# {"mode":"fill","query":"select ...","table":"pisco_prospects",
+#  "target_column":"outreach_message","instruction":"<system prompt>","limit":25}
+```
+
+Write the JSON to a file and use `-d @file` — inline quoting in the shell mangles the SQL.
+
+Trigger delegation when any of these is true: the query would return more than ~20 rows; the task is
+repetitive across records; or the session is already long. Do not delegate judgement, architecture,
+or anything where a wrong answer is expensive — the worker cannot browse, read repos, or run code.
+
 ## House rules learned the hard way
 
 - Cold outreach goes out **one at a time** and only to verified emails of real, named people.
