@@ -76,9 +76,39 @@ Deno.serve(async (req: Request) => {
       } catch (e: any) { try { await client.close(); } catch (_) {} return new Response(JSON.stringify({ ok: false, error: e?.message || String(e) }), { headers: { "Content-Type": "application/json" } }); }
     }
 
-    const limit = Math.min(Math.max(parseInt(body.limit ?? 2, 10) || 2, 1), 10);
+    // PACING. Cold outreach must drip, never burst: a batch of 10 in one SMTP session is
+    // the classic spam signal. Three limits, all enforced here so no caller can bypass them:
+    //   MAX_PER_CALL  - hard ceiling per invocation
+    //   MAX_PER_DAY   - rolling 24h ceiling, counted from rows already marked sent
+    //   MIN_GAP_MIN   - minimum quiet period since the last send
+    // Overridable per call, but only DOWNWARD; force:true is the deliberate escape hatch.
+    const MAX_PER_CALL = 3, MAX_PER_DAY = 8, MIN_GAP_MIN = 20;
+    const force = body.force === true;
+    const requested = Math.max(parseInt(body.limit ?? 2, 10) || 2, 1);
+    const limit = force ? Math.min(requested, 10) : Math.min(requested, MAX_PER_CALL);
     const onlyVerified = body.only_verified !== false;
     const dryRun = body.dry_run === true;
+    const gapMs = Math.min(Math.max(parseInt(body.gap_seconds ?? 25, 10) || 25, 0), 60) * 1000;
+
+    // Rolling 24h volume + quiet-period check (skipped for previews and explicit force).
+    let sentLast24 = 0, minsSinceLast: number | null = null;
+    if (!dryRun) {
+      const since = new Date(Date.now() - 24 * 3600 * 1000).toISOString();
+      const { data: recent } = await sb.from("niah_prospects")
+        .select("updated_at").eq("status", "sent").gte("updated_at", since)
+        .order("updated_at", { ascending: false });
+      sentLast24 = recent?.length ?? 0;
+      if (recent && recent.length) minsSinceLast = (Date.now() - new Date(recent[0].updated_at).getTime()) / 60000;
+      if (!force) {
+        const remainingToday = MAX_PER_DAY - sentLast24;
+        if (remainingToday <= 0) {
+          return new Response(JSON.stringify({ ok: true, sent: 0, throttled: "daily_cap", sent_last_24h: sentLast24, cap: MAX_PER_DAY, note: `Daily cap reached. Try later, or pass force:true to override.` }), { headers: { "Content-Type": "application/json" } });
+        }
+        if (minsSinceLast !== null && minsSinceLast < MIN_GAP_MIN) {
+          return new Response(JSON.stringify({ ok: true, sent: 0, throttled: "min_gap", minutes_since_last_send: Math.round(minsSinceLast), min_gap_minutes: MIN_GAP_MIN, note: `Last send was too recent. Wait ${Math.ceil(MIN_GAP_MIN - minsSinceLast)} more minutes, or pass force:true.` }), { headers: { "Content-Type": "application/json" } });
+        }
+      }
+    }
 
     // release_from: promote a parked status (e.g. "ready_monday") to ready_to_send in the
     // same authenticated call. Lets a scheduled run fire without any database tooling.
@@ -107,7 +137,7 @@ Deno.serve(async (req: Request) => {
 
     let q = sb.from("niah_prospects").select("id,company,decision_maker,email,email_status,outreach_message")
       .eq("status", "ready_to_send").not("email", "is", null).not("outreach_message", "is", null)
-      .order("tier", { ascending: true }).limit(limit);
+      .order("tier", { ascending: true }).limit(force ? limit : Math.max(1, Math.min(limit, MAX_PER_DAY - sentLast24)));
     if (onlyVerified) q = q.eq("email_status", "verified");
     const { data: rows, error } = await q;
     if (error) return new Response(JSON.stringify({ ok: false, error: error.message }), { status: 200 });
@@ -117,8 +147,12 @@ Deno.serve(async (req: Request) => {
 
     const client = new SMTPClient({ connection: { hostname: host, port, tls: port === 465, auth: { username: user, password: pass } } });
     const results: any[] = [];
+    let first = true;
     for (const r of rows as any[]) {
       try {
+        // Stagger: never fire a batch as one burst down a single SMTP session.
+        if (!first && gapMs > 0) await new Promise((res) => setTimeout(res, gapMs));
+        first = false;
         await sendMail(client, from, r.email, subjectFor(r.company), r.outreach_message);
         await sb.from("niah_prospects").update({ status: "sent", updated_at: new Date().toISOString() }).eq("id", r.id);
         await sb.from("hermes_entries").insert({ agent: "hermes", type: "log", title: `Sent: ${r.company}`, body: `Niah outreach emailed to ${r.decision_maker ?? "contact"} <${r.email}> at ${r.company}.`, tags: ["niah","sent"], metadata: { via: "niah-sender", prospect_id: r.id } });
@@ -130,7 +164,7 @@ Deno.serve(async (req: Request) => {
     }
     try { await client.close(); } catch (_) {}
     const sent = results.filter((r) => r.sent).length;
-    return new Response(JSON.stringify({ ok: true, released, sent, attempted: results.length, results }), { headers: { "Content-Type": "application/json" } });
+    return new Response(JSON.stringify({ ok: true, released, sent, attempted: results.length, sent_last_24h: sentLast24 + sent, daily_cap: MAX_PER_DAY, gap_seconds: gapMs / 1000, results }), { headers: { "Content-Type": "application/json" } });
   } catch (e: any) {
     return new Response("error: " + (e?.message || String(e)), { status: 200 });
   }
