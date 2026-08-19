@@ -16,11 +16,14 @@ NEVER offer anything for free. Do not write "free", "no cost", "at no charge", "
 
 KEEP IT SHORT. The whole body must be under 60 words. Short emails get replies; long ones get deleted. Cut every word that is not doing work.
 
+BE SPECIFIC TO THIS COMPANY. You are given context notes with the company's full name, what they do, and their city. Use it. A sentence that would work for any event company is a FAILED sentence. Name what THIS company actually does, in their words: congresses, exhibitions, MICE programmes, virtual events, experiential events, corporate events, whichever fits. Never write the generic phrase "corporate events" unless nothing more specific is available.
+
 Write ONLY the body (NO signature) to the named decision-maker:
 - Line 1: "Hi <FirstName>,".
 - Then exactly TWO sentences:
-  1) Under 25 words: names this company's specific event or event type and what Niah does (AI matchmaking inside the event, no app, no badges).
-  2) The ask, phrased as a simple question about whether they would be interested in matchmaking at their events (e.g. "Is that something you would want at <event>?" or "Would that be of interest for your events?").
+  1) Under 25 words: name what THIS company runs or produces, then what Niah does inside it (AI matchmaking, no app, no badges).
+  2) The ask, phrased as a simple question about whether they would be interested (e.g. "Is that something you would want at <their event type>?" or "Would that be of interest for the events you produce?").
+- VARY the opening. Do not start every email the same way; alternate between naming the company first and naming what they run first.
 - No preamble ("I hope this finds you well"), no throat-clearing, no restating their business back to them.
 - Plain text. NO em dashes, en dashes, tildes, or markdown. Use commas. Do NOT invent company facts. Do NOT add a sign-off, name, or URL.`;
 
