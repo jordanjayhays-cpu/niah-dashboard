@@ -76,3 +76,32 @@ or anything where a wrong answer is expensive — the worker cannot browse, read
   reads that table. If it is not on the board, it does not exist.
 - Cron jobs that call Claude are the expensive ones. `claude-responder` runs every 15 min; do not
   put it back to every 5.
+
+## Cron + alerting rules (learned 2026-08-22, the hard way)
+
+**Gate before the model, never after.** `hermes-responder` returns early when its inbox is empty and
+only then calls the LLM — copy that shape. `claude-responder` v13 did the opposite: it built a full
+prompt, paid for it, and got back `SKIP`. Because `SKIP` wrote nothing, the *identical* input was
+re-priced every 15 min, up to 96x/day at ~21.5k tokens each. Fixed in v14 with an idempotency gate
+keyed on `agent_state['claude-responder:last_seen'].entry_id`.
+
+**Rate limits are not deduplication.** `detect_stalls()` had "one alert max per 2 hours", which is a
+throttle — it faithfully re-sent the same three blocked tasks 12x/day for weeks (245 rows archived).
+The fix is a **fingerprint**: `md5()` over stable identity keys (task id + kind) only. Never let
+volatile text into the hash — the old body embedded `BLOCKED 315.1h`, so it could never look like a
+duplicate to itself. Re-alert only when the fingerprint *changes*, plus a 7-day `repeat_interval`.
+
+**Never put Jordan's own tasks in an agent-stall alert.** He has ~36 open `assigned_to='jordan'`
+rows; including them made every alert a 5.4k-char re-dump of his backlog. His to-dos reach him via
+the 09:00 brief — the stall alert is for *agent* work that is stuck.
+
+**An alert with no path to a human is not an alert.** Three tasks sat blocked for two weeks while the
+system generated 840k characters about them into a table nobody reads. `detect_stalls()` now upserts
+ONE `assigned_to='jordan'` task (refreshed in place, never duplicated) so it lands in the brief.
+
+**Prompt caching does not apply here.** The cacheable prefix (SYSTEM ~50 tok + pinned protocol ~664
+tok) is ~714 — under the 1024-token minimum — and the 15-min cron exceeds the 5-min default TTL.
+Enabling it would add a ~1.25x write premium on 100% misses. Do not "optimise" this again.
+
+**Keep the reasoning window conversational.** MODE 3 excludes `agent='system'` and truncates bodies
+to 400 chars. Machine-to-human notifications are not conversation and must never fill the window.
