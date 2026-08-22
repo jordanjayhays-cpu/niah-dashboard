@@ -148,3 +148,31 @@ Audit 2026-08-22: 28 triggers, ~16 Claude sessions/day. Cut to 21 triggers, ~10 
 
 Measure value as *board movement per firing*, not uptime. A Routine that runs perfectly and changes
 nothing is the most expensive kind of green dashboard.
+
+## Outreach safety + retention (2026-08-22, round 2)
+
+**PISCO sends are verified-only now — do not loosen this.** `pisco_daily_send()` and
+`pisco_daily_followup()` were posting `{"only_verified":false}` and their SQL guard never checked
+`email_status`. Eight emails had already gone to unverified/pattern_guess addresses. Both now filter
+`email_status = 'verified'` AND send `only_verified:true`. This protects the jordan@placewell.io
+sender reputation the whole pipeline depends on. Current queue: 60 eligible, all verified.
+
+**Never mass-rewrite `tier` to force a pick.** Both functions ran
+`UPDATE pisco_prospects SET tier=5 WHERE status='ready_to_send' AND id <> target.id`, which flattened
+the entire queue on every send and permanently destroyed the priority ranking — all 62 queued rows
+are now tier 5, so `ORDER BY tier ASC` had degenerated to created_at only. Fixed to demote only the
+previous target (`AND tier = 0`). The historical tier values for the queue are gone and would need
+re-scoring to recover.
+
+**Telemetry prunes itself now.** `prune_telemetry()` (cron `prune-telemetry-daily`, 03:20) drops
+`agent_heartbeats` older than 14 days and completed `agent_prompts` older than 30. Heartbeats were
+accumulating ~323/day (~118k/yr) and had already required one manual 16.5k-row cleanup.
+
+**`linkedin-poster-daily` was a zombie — unscheduled.** It fired daily for a month and posted
+nothing: both queued items are `draft — held for Jordan approval` and it never self-approves. Its
+only real post (2026-07-22) was deleted from LinkedIn at Jordan's request. A daily cron holding
+write access to his professional LinkedIn while producing nothing is risk without value. The two
+overdue drafts are on Jordan's board with the exact command to re-enable posting.
+
+Same lesson three times in one session: **a job that succeeds every run and changes nothing is the
+most expensive kind of green.** Check output, never status.
