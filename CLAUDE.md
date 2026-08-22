@@ -3,9 +3,10 @@
 Read this first; it saves every session from rediscovering the setup.
 
 ## This lane
-- **Niah** — B2B event matchmaking app. The live app is Lovable project
-  `d9cccd2d-c8f9-408f-91da-5ff739da5efd`, which syncs to **Niahconnect/niah-matchmaker-pro**
-  (private, other org). This repo holds the dashboard/support side.
+- **Niah** — B2B event matchmaking app. The live app syncs to **Niahconnect/niah-matchmaker-pro**
+  (private, other org). Its Lovable project id is UNSURE — verify in Lovable before any edit.
+  (An old docs error said it was `d9cccd2d…`; that id is actually the Agent Command Center,
+  verified 2026-08-22.) This repo holds the dashboard/support side.
 - Outreach data lives on Supabase `neurodashboards` (`dprdnrgjkzgfgtcsguuq`): `niah_prospects`,
   plus the shared `agent_tasks` board. The Niah drip Routine sends weekday outreach at 09:30 Madrid.
 - Events pipeline: the Notion "🎪 Niah Events Pipeline" database holds curated Madrid events.
