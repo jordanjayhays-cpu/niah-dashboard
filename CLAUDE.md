@@ -127,3 +127,24 @@ ADMIN_PASSWORD/ADMIN_USERNAME/PORT, which is how we proved it never used the Pos
 pinned to `... 18 8 *` (Aug 18). Cron has no concept of "once": each had run exactly once and was
 set to fire again on 2027-08-18, sending cold outreach to real people with nobody watching. All six
 unscheduled. If you ever schedule a one-shot send, add a cleanup step in the same session.
+
+## Where the tokens actually go: Routines, not cron
+
+The expensive thing in this system is **Claude Routines (triggers)** — each firing spawns a whole
+Claude session. Edge-function crons calling Sonnet are pennies by comparison. Before optimising
+anything else, run `list_triggers` and count firings per day.
+
+Audit 2026-08-22: 28 triggers, ~16 Claude sessions/day. Cut to 21 triggers, ~10 sessions/day.
+- Deleted 7 dead ones: `Codex Runner` (an impostor that could never work — Routine-created sessions
+  get no `mcp__*` tools) and six July-era `neurodashboards` monitors/supervisors whose prompts do
+  exactly what `claude-responder` + `hermes-responder` + `stall-detector` now do in SQL.
+- `Neurodash PM + worker` was on `0 6-20/2 * * *` = 8x/day. Over 14 days that is 112 sessions, and
+  it touched 6 tasks. Reduced to `0 7,15 * * *` (2x/day). NOT deleted — it genuinely executes tasks,
+  ships deliverables and maintains the bottleneck board. Reduce cadence before killing a useful agent.
+- Left alone: the PK cluster, Massage Club cluster, Niah drip, Jordan's daily bottleneck reminder,
+  weekly LinkedIn refresh. These drive live projects; no evidence of waste.
+- Left alone deliberately: `PAUSED — NIAH 5 event-agency emails` is inert (one-shot date already
+  passed) but holds drafted outreach content worth keeping.
+
+Measure value as *board movement per firing*, not uptime. A Routine that runs perfectly and changes
+nothing is the most expensive kind of green dashboard.
