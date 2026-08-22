@@ -176,3 +176,26 @@ overdue drafts are on Jordan's board with the exact command to re-enable posting
 
 Same lesson three times in one session: **a job that succeeds every run and changes nothing is the
 most expensive kind of green.** Check output, never status.
+
+## The decision queue (2026-08-22 — the operating model)
+
+The system's throughput limit is Jordan's decisions/day, not agent capacity. Rules that keep it true:
+
+- **The 09:00 brief is a DECISION brief, max 5 items,** each phrased YES/NO/KILL (trigger
+  `trig_01WnxP7aL5oYfSQMHCGsG95A`). Never let it dump the whole queue — a 39-item brief gets ignored
+  and stalls everything behind it.
+- **Queue hygiene when creating jordan tasks:** one task per sitting (merge batches — six LinkedIn
+  invite checks became one), standing plays are process docs not queue items, date-bound tasks whose
+  window passed get closed not nagged, and anything blocked on another decision gets priority=low
+  until the gate opens.
+- **A task featured 3+ times unanswered gets flagged, then archived in 7 days.** Silence is an
+  answer.
+- **Before adding to Jordan's queue, try to just do it.** "Stop codex-worker failure emails" sat 7
+  days as his task; it was diagnosable and closable from here (source: Railway Worker crash-loop,
+  already fixed; n8n Cloud had zero failed executions all month).
+- n8n Cloud note: the ~16 "active" Axton workflows from May 4 never execute (3 executions total in
+  August, all manual) — their triggers point at the dead Railway stack. Inert, not draining; clean up
+  in an n8n-lane session someday.
+
+Triage 2026-08-22: 39 open jordan tasks → 27 (12 closed/merged with notes in handoff_notes, 4
+downgraded, AI-Caller reframed as its real GO/KILL decision).
