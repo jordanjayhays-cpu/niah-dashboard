@@ -105,3 +105,25 @@ Enabling it would add a ~1.25x write premium on 100% misses. Do not "optimise" t
 
 **Keep the reasoning window conversational.** MODE 3 excludes `agent='system'` and truncates bodies
 to 400 chars. Machine-to-human notifications are not conversation and must never fill the window.
+
+## Infra cleanup rules (learned 2026-08-22)
+
+**Railway destructive ops need 2FA and CANNOT be done over an API/MCP token.** `removeServiceTool`
+reports "marked for removal" and the agent will claim success, but the change is only *staged* —
+`commitStagedChangesTool` returns `awaiting_user_action`. Always re-check `get-service-metrics`
+afterwards: a service still reporting nonzero `current` CPU was not deleted. Only Jordan can Apply,
+from the dashboard, with 2FA. Never report a Railway deletion as done without that read-back.
+
+**Verify a service's config before deleting it, not just its metrics.** Two things looked like
+garbage on CPU/network alone and were not:
+- `render-worker` (pk-render-pipeline) — Whisper transcription worker, repo `pk-render-worker`,
+  vars POLL_SECONDS/SUPABASE_URL/WHISPER_MODEL. Never ran since 2026-08-10. Broken, not disposable.
+- `nanobot` (abundant-radiance) — live public domain + admin creds + a persistent volume at `/data`.
+  Deleting it destroys that volume.
+`Hermes Agent` is the live OpenClaw gateway (~5 GB RAM, active) — never touch it. Its only vars are
+ADMIN_PASSWORD/ADMIN_USERNAME/PORT, which is how we proved it never used the Postgres/Redis stack.
+
+**One-shot pg_cron jobs are landmines — unschedule them after they fire.** Six PISCO sends were
+pinned to `... 18 8 *` (Aug 18). Cron has no concept of "once": each had run exactly once and was
+set to fire again on 2027-08-18, sending cold outreach to real people with nobody watching. All six
+unscheduled. If you ever schedule a one-shot send, add a cleanup step in the same session.
