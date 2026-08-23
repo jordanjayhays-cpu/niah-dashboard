@@ -38,3 +38,8 @@ Every research effort must end converted into, in priority order: (1) decisions 
 (2) drafts ready to approve-and-send, (3) board tasks with owners. The findings file may exist as
 backup, but never as the thing handed to Jordan. Same for artifacts: an analysis page without an
 action list at the top is unfinished.
+
+**Where deliverables live (so any session can retrieve them):** research memos and finished docs →
+the `jordan-projects` repo, one folder per project; prospect/data sets → Supabase tables; polished
+pages → the artifact gallery; actions → the `agent_tasks` board. The session scratchpad is
+EPHEMERAL — the container dies and takes it along; never leave a deliverable only there.
