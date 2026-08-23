@@ -31,3 +31,10 @@ Bulk row analysis (>~20 rows) → the `agent-worker` edge function, not SELECTs 
 **The master map lives in `mission-control/CLAUDE.md`** — the full system map, cron/alerting rules,
 infra rules, outreach safety rules, and the decision-queue operating model all moved there
 (2026-08-22). This file is Niah-lane only.
+
+## Research delivery rule (Jordan, 2026-08-23, binding)
+"Never just give me research MD, I don't know what to do with it." Research is NOT a deliverable.
+Every research effort must end converted into, in priority order: (1) decisions phrased YES/NO,
+(2) drafts ready to approve-and-send, (3) board tasks with owners. The findings file may exist as
+backup, but never as the thing handed to Jordan. Same for artifacts: an analysis page without an
+action list at the top is unfinished.
