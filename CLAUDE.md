@@ -2,6 +2,17 @@
 
 Read this first; it saves every session from rediscovering the setup.
 
+## Operator facts (durable — NEVER re-ask these; 2026-08-25)
+Jordan got these right in every chat because sessions kept re-asking. Stop. Facts of record:
+- **Citizenship:** United States (US passport). Relevant for every visa/immigration question.
+- **Based:** Madrid, Spain — IE Business School student. Solo operator.
+- **Relocation plan:** ~6 months in **Manila** then ~4 months in **Mexico City** to run in-person
+  tourism / Airbnb Experiences ventures. Manila first; CDMX is sequential phase-2.
+- **Operating model:** foreground = wherever he physically is; all other ventures must run
+  remote/automated in his absence.
+- Canonical copy lives in Supabase `neurodashboards` table **`operator_profile`** (key/value) —
+  any session with Supabase access should read it and never re-ask. Update it there when facts change.
+
 ## This lane
 - **Niah** — B2B event matchmaking app. The live app syncs to **Niahconnect/niah-matchmaker-pro**
   (private, other org). Its Lovable project id is UNSURE — verify in Lovable before any edit.
