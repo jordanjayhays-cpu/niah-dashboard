@@ -13,6 +13,28 @@ Jordan got these right in every chat because sessions kept re-asking. Stop. Fact
 - Canonical copy lives in Supabase `neurodashboards` table **`operator_profile`** (key/value) —
   any session with Supabase access should read it and never re-ask. Update it there when facts change.
 
+## Operating system — chat → next step → done (BINDING, every session, 2026-08-25)
+The point of the whole setup: ideas die in chats. This is the machine that turns them into
+finished work. Jordan asked for world-class PM applied to every project. Apply this, every time.
+
+1. **WIP limit (Theory of Constraints): max 3 ACTIVE ventures at once.** Starting ≠ progress;
+   finishing is. Everything not in the active 3 is explicitly BACKLOG — parked, not worked.
+   Throughput comes from *limiting* work-in-progress. To start a 4th, one must graduate or be killed.
+2. **Next-action rule (GTD): no idea leaves a chat without ONE concrete physical next action,
+   a single owner, and a date/trigger.** "Work on X" is not a next action; "Email 3 organizers by
+   Fri" is. If you can't name the next action, the idea isn't real yet — say so out loud.
+3. **Single owner + Definition of Done.** Every task: owner = `jordan` or a named agent, plus
+   "done when ___" (verifiable). Log to `agent_tasks`. Only Jordan-required items → assigned `jordan`.
+4. **Verify, don't assume.** Check output, not status. Mark done only when the Definition of Done
+   is met (use `verified_at` / `brain_handoffs`).
+5. **Weekly Review = the heartbeat.** Once a week: re-pick the active 3, park/kill the rest, ensure
+   each active venture has exactly one live next action, unblock anything stalled >7 days. Boards
+   rot without this — that is exactly what happened to the 33-task pile.
+6. **Prioritize with ICE** (Impact × Confidence × Ease, 1–10 each) when choosing the active 3.
+7. **Chat exit rule (chat → operations):** before ending any substantive chat, run each idea through:
+   *In the active 3?* → if no, backlog it and stop. If yes → define next action → owner → date →
+   write to `agent_tasks`. This is the bridge from talking to executing. Do it every time.
+
 ## This lane
 - **Niah** — B2B event matchmaking app. The live app syncs to **Niahconnect/niah-matchmaker-pro**
   (private, other org). Its Lovable project id is UNSURE — verify in Lovable before any edit.
