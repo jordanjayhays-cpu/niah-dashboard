@@ -13,6 +13,22 @@ Jordan got these right in every chat because sessions kept re-asking. Stop. Fact
 - Canonical copy lives in Supabase `neurodashboards` table **`operator_profile`** (key/value) —
   any session with Supabase access should read it and never re-ask. Update it there when facts change.
 
+## Coordination protocol (BINDING — stop chats duplicating each other, 2026-08-26)
+Independent Claude chats can't see each other live. Jordan has repeatedly had TWO sessions do the
+same task different ways (e.g. one emailed the LinkedIn list, another built a page for it). This is
+the exact thing neurodashboards exists to prevent. Every session MUST:
+1. **Check first.** Before starting any non-trivial task, read the shared feed `hermes_entries`
+   (newest first) AND the board `agent_tasks`. If another session logged it started/done within the
+   last ~2h, DO NOT redo it — build on it or skip.
+2. **Claim it.** Set the `agent_tasks` row `status='in_progress'`, `assigned_to='claude'`,
+   `metadata.lease_until = now()+30m`, and log a `hermes_entries` row (agent='claude', type='status',
+   title='starting: <task>'). A task already `in_progress` with a live lease is OWNED by another
+   session — skip it.
+3. **Log completion.** When done, insert a `hermes_entries` row (type='log', 'done: <task>') and set
+   the task `done`. The board→hermes trigger keeps neurodashboards live so Jordan sees who did what.
+This won't stop two chats opened the same second, but it kills the common case. The live dashboard
+is https://neurodash-agent-dashboard.lovable.app (reads hermes_entries).
+
 ## Operating system — chat → next step → done (BINDING, every session, 2026-08-25)
 The point of the whole setup: ideas die in chats. This is the machine that turns them into
 finished work. Jordan asked for world-class PM applied to every project. Apply this, every time.
