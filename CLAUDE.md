@@ -2,6 +2,19 @@
 
 Read this first; it saves every session from rediscovering the setup.
 
+## SESSION BOOT — do this before anything (BINDING, 2026-08-29)
+Every session starts blind unless it boots from shared memory. Before any non-trivial work, fetch the
+one briefing that hands you Jordan's facts, the binding loop, the LIVE board (what another chat already
+owns), reminders due, and the tool map:
+
+    GET https://dprdnrgjkzgfgtcsguuq.supabase.co/functions/v1/boot?k=<CAPTURE_KEY>&format=md
+    (CAPTURE_KEY is in Supabase app_secrets; or use header x-capture-key. JSON version: drop &format=md.)
+
+Then obey it: CHECK the board → CLAIM what you take (status=in_progress, lease 30m) → do the work →
+LOG completion (mark done). Deliverables → Notion (docs); state → this board (Supabase). This is the
+machine that stops chats duplicating each other. If `/boot` is unreachable, fall back to reading
+`operator_profile` + `agent_tasks` directly (see below).
+
 ## Operator facts (durable — NEVER re-ask these; 2026-08-25)
 Jordan got these right in every chat because sessions kept re-asking. Stop. Facts of record:
 - **Citizenship:** United States (US passport). Relevant for every visa/immigration question.
