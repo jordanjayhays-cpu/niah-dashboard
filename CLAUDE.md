@@ -13,6 +13,12 @@ Jordan got these right in every chat because sessions kept re-asking. Stop. Fact
 - Canonical copy lives in Supabase `neurodashboards` table **`operator_profile`** (key/value) —
   any session with Supabase access should read it and never re-ask. Update it there when facts change.
 
+## Notion is connected (durable — 2026-08-26)
+Notion integration token is in Supabase `app_secrets.NOTION_TOKEN`. Any session can use Notion even
+when the Notion MCP is down: call the REST API directly — `https://api.notion.com/v1/...`, headers
+`Authorization: Bearer <token>` + `Notion-Version: 2022-06-28`. A Notion internal-integration token
+only sees pages/DBs explicitly SHARED with it (in Notion: ••• → Connections). Never re-ask for the token.
+
 ## Coordination protocol (BINDING — stop chats duplicating each other, 2026-08-26)
 Independent Claude chats can't see each other live. Jordan has repeatedly had TWO sessions do the
 same task different ways (e.g. one emailed the LinkedIn list, another built a page for it). This is
