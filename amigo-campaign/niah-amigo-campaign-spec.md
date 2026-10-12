@@ -57,6 +57,13 @@ Either way, thanks for reading these.
 
 Jordan
 
+
+## Channel wording by region (important)
+Niah introduces people through messaging. How we SAY it depends on the lead's region:
+- North America (this campaign): always say "text message". Do not say WhatsApp to US or Canadian leads.
+- Europe and Latin America (future campaigns): say "WhatsApp" — that is what they use and what the product runs on there.
+This is wording for the audience, not a product rule.
+
 ## Reply handling
 - Any positive or curious reply: propose 2-3 concrete times (EST business hours) or send Jordan's booking link, same day.
 - Questions about Niah: answer in 2 sentences max (event matchmaking by text message, introductions with reasons, 81 percent acceptance in pilots), then return to the meeting ask.

@@ -15,6 +15,13 @@ Columns:
 - connection_note: ready-to-send connection request text (under 300 chars)
 - followup_message: ready-to-send message after they accept
 
+
+## Channel wording by region (important)
+Niah introduces people through messaging. How we SAY it depends on the lead's region:
+- North America (this campaign): always say "text message". Do not say WhatsApp to US or Canadian leads.
+- Europe and Latin America (future campaigns): say "WhatsApp" — that is what they use and what the product runs on there.
+This is wording for the audience, not a product rule.
+
 ## Rules
 1. Priority order: start with in_email_campaign = NO (LinkedIn is their only door), then YES rows.
 2. For in_email_campaign = YES rows: wait at least 2 days after the campaign start before the connection request, and never reference the email.
