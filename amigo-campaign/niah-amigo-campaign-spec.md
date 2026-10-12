@@ -1,7 +1,7 @@
 # Amigo Sales Campaign Spec: Niah Franchise Discovery
 
 ## Objective
-Book 15 minute discovery meetings with franchise development decision makers to see if Niah can help them get qualified franchisee candidates. Success metric: meetings booked with Jordan (jordan@niahconnects.com).
+book 15 minute exploratory calls (no selling) with franchise development decision makers to see if Niah can help them get qualified franchisee candidates. Success metric: meetings booked with Jordan (jordan@niahconnects.com).
 
 ## Cadence
 One email per week, four weeks total, per lead. Stop immediately on any reply. Send window: 9:00 to 11:30am in the lead's own time zone, Tuesday to Thursday.
@@ -23,7 +23,7 @@ Subject: expo leads "your booth at <show>" / brands "finding franchisees" / agen
 
 {opener} Most emerging brands tell us the hard part is not interest, it is getting qualified candidates in front of the right person. How is that going at {company}?
 
-I work with Niah. We connect the right people at events and introduce them with reasons, over WhatsApp, so the right candidates reach you instead of walking past. Would you be open to a 15 minute call to see if that could help {company}?
+I work with Niah. We connect the right people at events and introduce them with reasons, by text message, so the right candidates reach you instead of walking past. Would you be open to a 15 minute call to see if that could help {company}?
 
 Jordan Hays
 Niah
@@ -42,7 +42,7 @@ Jordan
 ### Week 3 — the concrete moment (same thread)
 {greeting}
 
-Franchise Expo South runs February 5 and 6 in Fort Lauderdale. Imagine every serious candidate who registers getting a WhatsApp introduction to the brands that actually fit them, with the reason spelled out.
+Franchise Expo South runs February 5 and 6 in Fort Lauderdale. Imagine every serious candidate who registers getting a text message introduction to the brands that actually fit them, with the reason spelled out.
 
 We are putting together a small group of brands for that pilot. If you would like {company} considered, a 15 minute call is enough to see if it makes sense.
 
@@ -59,7 +59,7 @@ Jordan
 
 ## Reply handling
 - Any positive or curious reply: propose 2-3 concrete times (EST business hours) or send Jordan's booking link, same day.
-- Questions about Niah: answer in 2 sentences max (event matchmaking over WhatsApp, introductions with reasons, 81 percent acceptance in pilots), then return to the meeting ask.
+- Questions about Niah: answer in 2 sentences max (event matchmaking by text message, introductions with reasons, 81 percent acceptance in pilots), then return to the meeting ask.
 - "Not interested": thank, stop, mark closed. No rebuttals.
 - Out of office: pause that lead 1 week, resume.
 - Every reply is flagged to Jordan the same day with the verbatim text.

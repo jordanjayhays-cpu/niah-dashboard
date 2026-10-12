@@ -20,7 +20,7 @@ Columns:
 2. For in_email_campaign = YES rows: wait at least 2 days after the campaign start before the connection request, and never reference the email.
 3. Volume: max 20 connection requests per day per LinkedIn account (deliverability and LinkedIn limits).
 4. If someone replies with an answer or books a call: stop all follow-ups, flag to Jordan same day.
-5. If someone asks "what is Niah": one sentence only ("We match people at events over WhatsApp, but this research is about your world, not our product") and return to the question.
+5. If someone asks "what is Niah": one sentence only ("We match people at events by text message, but this research is about your world, not our product") and return to the question.
 6. No pitching, no links, no attachments, no more than one follow-up after accept. A second follow-up only if they engaged.
 
 ## What a successful contact produces
